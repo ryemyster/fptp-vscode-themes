@@ -1,6 +1,6 @@
 # Pixels to Punk Cyber
 
-A cyberpunk VS Code theme pack inspired by [From Pixels to Punk](https://www.frompixelstopunk.com/): loud, playful, anime-pop color, but still soft enough to stare at while you code.
+A cyberpunk VS Code theme pack inspired by the [From Pixels to Punk](https://www.frompixelstopunk.com/) brand: loud, playful, anime-pop color, punk energy, and enough softness for long coding sessions.
 
 This project is open source and repo-first. It is not published to the VS Code Marketplace.
 
