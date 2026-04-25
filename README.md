@@ -28,10 +28,12 @@ That is it. VS Code has new clothes now.
 
 If you just want to use the themes, download the `.vsix` file from the latest GitHub Release and install it in VS Code.
 
-You get fifteen themes:
+You get seventeen color themes and two icon themes:
 
 - **Pixels to Punk Cyber Dark**
 - **Pixels to Punk Cyber Light**
+- **Pixels to Punk Cyber Dark for Those with Glasses**
+- **Pixels to Punk Cyber Light for Those with Glasses**
 - **Pixels to Punk Neon Backstage**
 - **Pixels to Punk Basement Flyer**
 - **Pixels to Punk CRT After Midnight**
@@ -99,6 +101,8 @@ The important files are:
 - `package.json`: tells VS Code that this extension exists.
 - `themes/pixels-to-punk-cyber-dark-color-theme.json`: the default dark theme colors.
 - `themes/pixels-to-punk-cyber-light-color-theme.json`: the default light theme colors.
+- `themes/pixels-to-punk-cyber-dark-for-those-with-glasses-color-theme.json`: lower-glare dark cyber colors with softer accents and stronger reading contrast.
+- `themes/pixels-to-punk-cyber-light-for-those-with-glasses-color-theme.json`: warmer light cyber colors with reduced white glare and clearer syntax contrast.
 - `themes/pixels-to-punk-neon-backstage-color-theme.json`: electric concert-night colors.
 - `themes/pixels-to-punk-basement-flyer-color-theme.json`: gritty zine-poster colors.
 - `themes/pixels-to-punk-crt-after-midnight-color-theme.json`: retro terminal glow colors.

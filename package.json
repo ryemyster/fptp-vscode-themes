@@ -2,7 +2,7 @@
   "name": "pixels-to-punk-cyber",
   "displayName": "Pixels to Punk Cyber",
   "description": "Cyberpunk VS Code themes inspired by loud product energy, pop punk color, and anime glow.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "local",
   "license": "MIT",
   "repository": {
@@ -46,6 +46,16 @@
         "label": "Pixels to Punk Cyber Light",
         "uiTheme": "vs",
         "path": "./themes/pixels-to-punk-cyber-light-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Cyber Dark for Those with Glasses",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-cyber-dark-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Cyber Light for Those with Glasses",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-cyber-light-for-those-with-glasses-color-theme.json"
       },
       {
         "label": "Pixels to Punk Neon Backstage",
@@ -118,7 +128,7 @@
     "clean": "rm -rf node_modules pixels-to-punk-cyber-*.vsix",
     "demo:terminal-colors": "node scripts/terminal-colors.js",
     "package": "npx --no-install vsce package --allow-missing-repository",
-    "install:vsix": "code --install-extension pixels-to-punk-cyber-1.0.0.vsix --force"
+    "install:vsix": "code --install-extension pixels-to-punk-cyber-1.0.2.vsix --force"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.9.1"
