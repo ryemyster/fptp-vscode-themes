@@ -1,6 +1,6 @@
 # Pixels to Punk Cyber
 
-A cyberpunk VS Code theme pack inspired by the [From Pixels to Punk](https://www.frompixelstopunk.com/) brand: loud, playful, anime-pop color, punk energy, and enough softness for long coding sessions.
+A neon punk VS Code theme pack inspired by the [From Pixels to Punk](https://www.frompixelstopunk.com/) brand: loud, playful, anime-pop color, punk energy, and enough softness for long coding sessions.
 
 This project is open source and repo-first. It is not published to the VS Code Marketplace.
 
@@ -32,8 +32,8 @@ You get seventeen color themes and two icon themes.
 
 | Theme | Mode | What it feels like | Best for |
 | --- | --- | --- | --- |
-| **Pixels to Punk Cyber Dark** | Dark | The original cyberpunk night palette: cyan glow, hot pink accents, and crisp blue-black chrome. | The default dark Pixels to Punk look. |
-| **Pixels to Punk Cyber Light** | Light | The original daylight cyber palette: warm paper, teal controls, and punk magenta highlights. | The default light Pixels to Punk look. |
+| **Pixels to Punk Cyber Dark** | Dark | The original dark palette: cyan glow, hot pink accents, and crisp blue-black chrome. | The default dark Pixels to Punk look. |
+| **Pixels to Punk Cyber Light** | Light | The original light palette: warm paper, teal controls, and punk magenta highlights. | The default light Pixels to Punk look. |
 | **Pixels to Punk Cyber Dark for Those with Glasses** | Dark | A researched lower-glare Cyber Dark remix with softened neon, less pure-black contrast shock, and high syntax contrast. | Eye strain, glasses, contacts, long night sessions, and W3C/WCAG-aware readability. |
 | **Pixels to Punk Cyber Light for Those with Glasses** | Light | A researched lower-glare Cyber Light remix with a warmer background, reduced white glare, and readable muted accents. | Eye strain, glasses, contacts, bright rooms, and W3C/WCAG-aware readability. |
 | **Pixels to Punk Neon Backstage** | Dark | Electric concert-night color with intense cyan, pink, and violet energy. | Maximum cyberpop drama. |
