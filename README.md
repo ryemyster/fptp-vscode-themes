@@ -28,27 +28,45 @@ That is it. VS Code has new clothes now.
 
 If you just want to use the themes, download the `.vsix` file from the latest GitHub Release and install it in VS Code.
 
-You get seventeen color themes and two icon themes:
+You get seventeen color themes and two icon themes.
 
-- **Pixels to Punk Cyber Dark**
-- **Pixels to Punk Cyber Light**
-- **Pixels to Punk Cyber Dark for Those with Glasses**
-- **Pixels to Punk Cyber Light for Those with Glasses**
-- **Pixels to Punk Neon Backstage**
-- **Pixels to Punk Basement Flyer**
-- **Pixels to Punk CRT After Midnight**
-- **Pixels to Punk Candy Static**
-- **Pixels to Punk Streetlight Noir**
-- **Pixels to Punk Soft Focus Day**
-- **Pixels to Punk Soft Focus Night**
-- **Pixels to Punk Rainy Arcade**
-- **Pixels to Punk Photocopy Riot**
-- **Pixels to Punk Afterparty Aquarium**
-- **Pixels to Punk Mall Goth Daydream**
-- **Pixels to Punk Riot Glow Dark**
-- **Pixels to Punk Riot Glow Light**
-- **Pixels to Punk Cyber Icons**
-- **Pixels to Punk Cyber Icons Light**
+| Theme | Mode | What it feels like | Best for |
+| --- | --- | --- | --- |
+| **Pixels to Punk Cyber Dark** | Dark | The original cyberpunk night palette: cyan glow, hot pink accents, and crisp blue-black chrome. | The default dark Pixels to Punk look. |
+| **Pixels to Punk Cyber Light** | Light | The original daylight cyber palette: warm paper, teal controls, and punk magenta highlights. | The default light Pixels to Punk look. |
+| **Pixels to Punk Cyber Dark for Those with Glasses** | Dark | A researched lower-glare Cyber Dark remix with softened neon, less pure-black contrast shock, and high syntax contrast. | Eye strain, glasses, contacts, long night sessions, and W3C/WCAG-aware readability. |
+| **Pixels to Punk Cyber Light for Those with Glasses** | Light | A researched lower-glare Cyber Light remix with a warmer background, reduced white glare, and readable muted accents. | Eye strain, glasses, contacts, bright rooms, and W3C/WCAG-aware readability. |
+| **Pixels to Punk Neon Backstage** | Dark | Electric concert-night color with intense cyan, pink, and violet energy. | Maximum cyberpop drama. |
+| **Pixels to Punk Basement Flyer** | Dark | A gritty zine-poster palette with worn paper warmth and underground-show reds. | Punk texture without going fully neon. |
+| **Pixels to Punk CRT After Midnight** | Dark | Retro terminal glow with teal glass, green phosphor, and late-night amber. | Terminal-heavy work and nostalgic screens. |
+| **Pixels to Punk Candy Static** | Light | Bright arcade candy colors with playful pinks, blues, and yellows. | A high-energy light theme. |
+| **Pixels to Punk Streetlight Noir** | Dark | Cinematic late-night contrast with streetlight warmth and noir edges. | Dark workspaces that still want atmosphere. |
+| **Pixels to Punk Soft Focus Day** | Light | A calmer light palette with lower-glare surfaces and gentler accents. | Eye strain, daylight coding, and softer contrast. |
+| **Pixels to Punk Soft Focus Night** | Dark | A lower-luminance dark palette with softer text and less electric glare. | Eye strain, dim rooms, and long night sessions. |
+| **Pixels to Punk Rainy Arcade** | Dark | Blue rain, cyan glass, hot pink signage, and arcade-reflection color. | Moody neon without full saturation. |
+| **Pixels to Punk Photocopy Riot** | Light | Stark zine-paper contrast with red markup and blue ink. | Print-like light theme energy. |
+| **Pixels to Punk Afterparty Aquarium** | Dark | Deep teal nightlife with coral signage and soft green highlights. | Oceanic dark UI with party color. |
+| **Pixels to Punk Mall Goth Daydream** | Light | Lavender daylight, dark lipstick accents, and cooled-down neon. | A softer alt-pop light theme. |
+| **Pixels to Punk Riot Glow Dark** | Dark | Saturated violet chrome with cyan, neon pink, acid green, and arcade yellow. | The loudest dark theme in the pack. |
+| **Pixels to Punk Riot Glow Light** | Light | Bright lavender paper with the same cyan, neon pink, acid green, and arcade yellow punch. | The loudest light theme in the pack. |
+
+The icon themes are **Pixels to Punk Cyber Icons** and **Pixels to Punk Cyber Icons Light**.
+
+### Eye Strain And Accessibility Notes
+
+The glasses/contact-friendly themes and the Soft Focus themes were designed after research into practical screen comfort and accessibility guidance, especially [W3C/WAI low vision needs](https://www.w3.org/TR/low-vision-needs/), [WCAG contrast guidance](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum), and optometry guidance around glare and computer vision strain from the [American Optometric Association](https://www.aoa.org/healthy-eyes/eye-and-vision-conditions/computer-vision-syndrome).
+
+The main design choices are:
+
+- reduce glare from pure white or pure black surfaces
+- keep normal code text at strong contrast against the editor background
+- avoid relying on hue alone for syntax meaning
+- soften saturated neon colors while preserving the Cyber identity
+- make comments, line numbers, warnings, and errors readable enough for long sessions
+
+These themes are not medical treatment. They are practical color-system variants for people who notice more glare, halos, dryness, or fatigue when coding with glasses or contacts.
+
+If a newly installed theme does not appear in the picker right away, run **Developer: Reload Window** in VS Code, then open **Preferences: Color Theme** again.
 
 The matching folder icons are set as the default icon theme when this extension is installed.
 
