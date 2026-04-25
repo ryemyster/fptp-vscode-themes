@@ -1,0 +1,28 @@
+{
+  "iconDefinitions": {
+    "_file_light": {
+      "iconPath": "./light/file.svg"
+    },
+    "_folder_light": {
+      "iconPath": "./light/folder.svg"
+    },
+    "_folder_open_light": {
+      "iconPath": "./light/folder-open.svg"
+    },
+    "_root_folder_light": {
+      "iconPath": "./light/root-folder.svg"
+    },
+    "_root_folder_open_light": {
+      "iconPath": "./light/root-folder-open.svg"
+    }
+  },
+  "file": "_file_light",
+  "folder": "_folder_light",
+  "folderExpanded": "_folder_open_light",
+  "rootFolder": "_root_folder_light",
+  "rootFolderExpanded": "_root_folder_open_light",
+  "hidesExplorerArrows": false,
+  "languageIds": {},
+  "fileExtensions": {},
+  "fileNames": {}
+}
