@@ -2,7 +2,7 @@
   "name": "pixels-to-punk-cyber",
   "displayName": "Pixels to Punk Cyber",
   "description": "Cyberpunk VS Code themes inspired by loud product energy, pop punk color, and anime glow.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "local",
   "license": "MIT",
   "repository": {
@@ -81,6 +81,36 @@
         "label": "Pixels to Punk Soft Focus Night",
         "uiTheme": "vs-dark",
         "path": "./themes/pixels-to-punk-soft-focus-night-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Rainy Arcade",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-rainy-arcade-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Photocopy Riot",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-photocopy-riot-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Afterparty Aquarium",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-afterparty-aquarium-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Mall Goth Daydream",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-mall-goth-daydream-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Riot Glow Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-riot-glow-dark-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Riot Glow Light",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-riot-glow-light-color-theme.json"
       }
     ]
   },

@@ -28,7 +28,7 @@ That is it. VS Code has new clothes now.
 
 If you just want to use the themes, download the `.vsix` file from the latest GitHub Release and install it in VS Code.
 
-You get nine themes:
+You get fifteen themes:
 
 - **Pixels to Punk Cyber Dark**
 - **Pixels to Punk Cyber Light**
@@ -39,6 +39,12 @@ You get nine themes:
 - **Pixels to Punk Streetlight Noir**
 - **Pixels to Punk Soft Focus Day**
 - **Pixels to Punk Soft Focus Night**
+- **Pixels to Punk Rainy Arcade**
+- **Pixels to Punk Photocopy Riot**
+- **Pixels to Punk Afterparty Aquarium**
+- **Pixels to Punk Mall Goth Daydream**
+- **Pixels to Punk Riot Glow Dark**
+- **Pixels to Punk Riot Glow Light**
 - **Pixels to Punk Cyber Icons**
 - **Pixels to Punk Cyber Icons Light**
 
@@ -100,6 +106,12 @@ The important files are:
 - `themes/pixels-to-punk-streetlight-noir-color-theme.json`: cinematic late-night colors.
 - `themes/pixels-to-punk-soft-focus-day-color-theme.json`: lower-glare light colors for normal room lighting.
 - `themes/pixels-to-punk-soft-focus-night-color-theme.json`: lower-luminance dark colors for dimmer rooms.
+- `themes/pixels-to-punk-rainy-arcade-color-theme.json`: blue rain, cyan glass, and hot pink arcade glow.
+- `themes/pixels-to-punk-photocopy-riot-color-theme.json`: stark zine-paper contrast with red markup and blue ink.
+- `themes/pixels-to-punk-afterparty-aquarium-color-theme.json`: deep teal nightlife with coral signage and soft green highlights.
+- `themes/pixels-to-punk-mall-goth-daydream-color-theme.json`: lavender daylight, dark lipstick accents, and cooled-down neon.
+- `themes/pixels-to-punk-riot-glow-dark-color-theme.json`: saturated violet chrome with cyan, neon pink, acid green, and arcade yellow.
+- `themes/pixels-to-punk-riot-glow-light-color-theme.json`: bright lavender paper with the same cyan, neon pink, acid green, and arcade yellow punch.
 - `icons/pixels-to-punk-cyber-icon-theme.json`: the matching folder icons.
 
 ## Try It Right Now
