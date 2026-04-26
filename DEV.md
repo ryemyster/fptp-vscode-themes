@@ -32,7 +32,7 @@ VS Code reads the JSON and SVG files in this repo.
 | `icons/light/` | Holds the light SVG icons. |
 | `icons/pixels-to-punk-cyber-icon-theme.json` | Maps files to dark icons. |
 | `icons/pixels-to-punk-cyber-light-icon-theme.json` | Maps files to light icons. |
-| `src/extension.js` | Adds command palette commands, including workspace mood presets. |
+| `src/extension.js` | Adds command palette commands, including workspace mood presets and time-of-day switching. |
 | `scripts/build-theme-variants.js` | Builds theme variants from palettes. |
 | `scripts/build-file-icons.js` | Builds file icons and icon maps. |
 | `scripts/terminal-colors.js` | Prints terminal colors for testing. |
@@ -289,6 +289,114 @@ Update presets when:
 - users need a clearer reset path
 - a new mood gets added
 
+## Time-Of-Day Theme Switching
+
+Time-of-day switching picks a theme based on the current hour.
+
+It is opt-in.
+
+It does not run automatically until a person turns it on.
+
+It does not change code.
+
+It writes workspace settings only.
+
+If no folder or workspace is open, the command shows a warning and does not change anything.
+
+### What It Changes
+
+Time-of-day switching changes:
+
+- `workbench.colorTheme`
+- `workbench.iconTheme`
+
+It also reads these Pixels to Punk settings:
+
+- `pixelsToPunk.timeOfDay.enabled`
+- `pixelsToPunk.timeOfDay.dayStartHour`
+- `pixelsToPunk.timeOfDay.eveningStartHour`
+- `pixelsToPunk.timeOfDay.nightStartHour`
+- `pixelsToPunk.timeOfDay.dayTheme`
+- `pixelsToPunk.timeOfDay.eveningTheme`
+- `pixelsToPunk.timeOfDay.nightTheme`
+- `pixelsToPunk.timeOfDay.dayIconTheme`
+- `pixelsToPunk.timeOfDay.eveningIconTheme`
+- `pixelsToPunk.timeOfDay.nightIconTheme`
+
+### Default Pairings
+
+| Time | Starts | Color Theme | Icon Theme |
+| --- | --- | --- | --- |
+| Day | 7 AM | Pixels to Punk Soft Focus Day | Pixels to Punk Cyber Icons Light |
+| Evening | 5 PM | Pixels to Punk Rainy Arcade | Pixels to Punk Cyber Icons |
+| Night | 9 PM | Pixels to Punk CRT After Midnight | Pixels to Punk Cyber Icons |
+
+### How People Use It
+
+To turn on automatic switching:
+
+```text
+Pixels to Punk: Enable Time-of-Day Switching
+```
+
+To apply the right theme once:
+
+```text
+Pixels to Punk: Apply Current Time-of-Day Theme
+```
+
+To turn off automatic switching:
+
+```text
+Pixels to Punk: Disable Time-of-Day Switching
+```
+
+### Where To Update It
+
+The switching code lives here:
+
+```text
+src/extension.js
+```
+
+The command list lives in `package.json` under:
+
+```text
+contributes.commands
+```
+
+The user settings live in `package.json` under:
+
+```text
+contributes.configuration
+```
+
+The command activation list lives in `package.json` under:
+
+```text
+activationEvents
+```
+
+### When To Update It
+
+Update time-of-day switching when:
+
+- the default day theme should change
+- the default evening theme should change
+- the default night theme should change
+- a light pairing needs light icons
+- a dark pairing needs dark icons
+- the start times need to feel more natural
+- users need a clearer on or off command
+
+### Theme Fit Notes
+
+The default day theme uses light icons because it is a light theme.
+
+The default evening and night themes use dark icons because they are dark themes.
+
+If a future default uses a high-contrast theme, check the icon theme too. The pair should be readable, not just colorful.
+
 ## Test Terminal Colors
 
 The theme controls terminal colors.
@@ -380,13 +488,13 @@ If that version does not have a GitHub Release yet, the workflow:
 Example:
 
 ```text
-1.0.5
+1.0.6
 ```
 
 That becomes:
 
 ```text
-v1.0.5
+v1.0.6
 ```
 
 If that release already exists, the workflow exits without publishing another one.
@@ -425,7 +533,7 @@ Example:
 
 ```sh
 git add .
-git commit -m "Bump release to v1.0.5"
+git commit -m "Bump release to v1.0.6"
 git push
 ```
 

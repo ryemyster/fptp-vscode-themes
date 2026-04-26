@@ -2,7 +2,7 @@
   "name": "pixels-to-punk-cyber",
   "displayName": "Pixels to Punk Cyber",
   "description": "Neon punk VS Code themes inspired by the From Pixels to Punk brand, with anime-pop color, punk energy, and coding comfort.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "publisher": "local",
   "license": "MIT",
   "main": "./src/extension.js",
@@ -22,13 +22,17 @@
     "Other"
   ],
   "activationEvents": [
+    "onStartupFinished",
     "onCommand:pixelsToPunk.pickMoodPreset",
     "onCommand:pixelsToPunk.applyDeepWorkPreset",
     "onCommand:pixelsToPunk.applyTerminalNightPreset",
     "onCommand:pixelsToPunk.applyZineShopPreset",
     "onCommand:pixelsToPunk.applyMaximumNeonPreset",
     "onCommand:pixelsToPunk.applyLowGlarePreset",
-    "onCommand:pixelsToPunk.resetMoodPreset"
+    "onCommand:pixelsToPunk.resetMoodPreset",
+    "onCommand:pixelsToPunk.applyCurrentTimeOfDayTheme",
+    "onCommand:pixelsToPunk.enableTimeOfDaySwitching",
+    "onCommand:pixelsToPunk.disableTimeOfDaySwitching"
   ],
   "contributes": {
     "commands": [
@@ -66,8 +70,94 @@
         "command": "pixelsToPunk.resetMoodPreset",
         "title": "Pixels to Punk: Reset Workspace Mood Preset",
         "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.applyCurrentTimeOfDayTheme",
+        "title": "Pixels to Punk: Apply Current Time-of-Day Theme",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.enableTimeOfDaySwitching",
+        "title": "Pixels to Punk: Enable Time-of-Day Switching",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.disableTimeOfDaySwitching",
+        "title": "Pixels to Punk: Disable Time-of-Day Switching",
+        "category": "Pixels to Punk"
       }
     ],
+    "configuration": {
+      "title": "Pixels to Punk",
+      "properties": {
+        "pixelsToPunk.timeOfDay.enabled": {
+          "type": "boolean",
+          "default": false,
+          "scope": "resource",
+          "description": "Automatically apply the matching Pixels to Punk time-of-day theme for the current workspace."
+        },
+        "pixelsToPunk.timeOfDay.dayStartHour": {
+          "type": "number",
+          "default": 7,
+          "minimum": 0,
+          "maximum": 23,
+          "scope": "resource",
+          "description": "Hour when the day theme starts, using 24-hour time."
+        },
+        "pixelsToPunk.timeOfDay.eveningStartHour": {
+          "type": "number",
+          "default": 17,
+          "minimum": 0,
+          "maximum": 23,
+          "scope": "resource",
+          "description": "Hour when the evening theme starts, using 24-hour time."
+        },
+        "pixelsToPunk.timeOfDay.nightStartHour": {
+          "type": "number",
+          "default": 21,
+          "minimum": 0,
+          "maximum": 23,
+          "scope": "resource",
+          "description": "Hour when the night theme starts, using 24-hour time."
+        },
+        "pixelsToPunk.timeOfDay.dayTheme": {
+          "type": "string",
+          "default": "Pixels to Punk Soft Focus Day",
+          "scope": "resource",
+          "description": "Color theme to use during the day."
+        },
+        "pixelsToPunk.timeOfDay.eveningTheme": {
+          "type": "string",
+          "default": "Pixels to Punk Rainy Arcade",
+          "scope": "resource",
+          "description": "Color theme to use during the evening."
+        },
+        "pixelsToPunk.timeOfDay.nightTheme": {
+          "type": "string",
+          "default": "Pixels to Punk CRT After Midnight",
+          "scope": "resource",
+          "description": "Color theme to use at night."
+        },
+        "pixelsToPunk.timeOfDay.dayIconTheme": {
+          "type": "string",
+          "default": "pixels-to-punk-cyber-icons-light",
+          "scope": "resource",
+          "description": "File icon theme to use during the day."
+        },
+        "pixelsToPunk.timeOfDay.eveningIconTheme": {
+          "type": "string",
+          "default": "pixels-to-punk-cyber-icons",
+          "scope": "resource",
+          "description": "File icon theme to use during the evening."
+        },
+        "pixelsToPunk.timeOfDay.nightIconTheme": {
+          "type": "string",
+          "default": "pixels-to-punk-cyber-icons",
+          "scope": "resource",
+          "description": "File icon theme to use at night."
+        }
+      }
+    },
     "iconThemes": [
       {
         "id": "pixels-to-punk-cyber-icons",

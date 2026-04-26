@@ -94,6 +94,60 @@ To undo a mood preset:
 
 That clears the settings the mood preset changed.
 
+## Optional: Switch Themes By Time Of Day
+
+Time-of-day switching changes the theme for the folder you have open.
+
+It is off until you turn it on.
+
+It does not change your code.
+
+The default times are:
+
+- **Day** starts at 7 AM: Soft Focus Day with light icons
+- **Evening** starts at 5 PM: Rainy Arcade with dark icons
+- **Night** starts at 9 PM: CRT After Midnight with dark icons
+
+To turn it on:
+
+1. Open a project folder in VS Code.
+2. Press `Command + Shift + P`.
+3. Type:
+
+   ```text
+   Pixels to Punk: Enable Time-of-Day Switching
+   ```
+
+4. Press Enter.
+
+To change the theme right now without turning on automatic switching:
+
+1. Press `Command + Shift + P`.
+2. Type:
+
+   ```text
+   Pixels to Punk: Apply Current Time-of-Day Theme
+   ```
+
+3. Press Enter.
+
+To turn automatic switching off:
+
+1. Press `Command + Shift + P`.
+2. Type:
+
+   ```text
+   Pixels to Punk: Disable Time-of-Day Switching
+   ```
+
+3. Press Enter.
+
+If you want different times or themes, open VS Code Settings and search for:
+
+```text
+Pixels to Punk Time Of Day
+```
+
 ## If The Theme Does Not Show Up
 
 Sometimes VS Code needs a quick refresh.
