@@ -2,7 +2,7 @@
   "name": "pixels-to-punk-cyber",
   "displayName": "Pixels to Punk Cyber",
   "description": "Neon punk VS Code themes inspired by the From Pixels to Punk brand, with anime-pop color, punk energy, and coding comfort.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "publisher": "local",
   "license": "MIT",
   "main": "./src/extension.js",
@@ -32,7 +32,15 @@
     "onCommand:pixelsToPunk.resetMoodPreset",
     "onCommand:pixelsToPunk.applyCurrentTimeOfDayTheme",
     "onCommand:pixelsToPunk.enableTimeOfDaySwitching",
-    "onCommand:pixelsToPunk.disableTimeOfDaySwitching"
+    "onCommand:pixelsToPunk.disableTimeOfDaySwitching",
+    "onCommand:pixelsToPunk.pickThemePair",
+    "onCommand:pixelsToPunk.activateCyberDarkPair",
+    "onCommand:pixelsToPunk.activateCyberLightPair",
+    "onCommand:pixelsToPunk.activateSoftFocusDayPair",
+    "onCommand:pixelsToPunk.activateSoftFocusNightPair",
+    "onCommand:pixelsToPunk.activateHighContrastDarkPair",
+    "onCommand:pixelsToPunk.activateHighContrastLightPair",
+    "onCommand:pixelsToPunk.activateMatchingIconTheme"
   ],
   "contributes": {
     "commands": [
@@ -84,6 +92,46 @@
       {
         "command": "pixelsToPunk.disableTimeOfDaySwitching",
         "title": "Pixels to Punk: Disable Time-of-Day Switching",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.pickThemePair",
+        "title": "Pixels to Punk: Pick Matching Theme Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateCyberDarkPair",
+        "title": "Pixels to Punk: Activate Cyber Dark Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateCyberLightPair",
+        "title": "Pixels to Punk: Activate Cyber Light Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateSoftFocusDayPair",
+        "title": "Pixels to Punk: Activate Soft Focus Day Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateSoftFocusNightPair",
+        "title": "Pixels to Punk: Activate Soft Focus Night Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateHighContrastDarkPair",
+        "title": "Pixels to Punk: Activate High Contrast Dark Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateHighContrastLightPair",
+        "title": "Pixels to Punk: Activate High Contrast Light Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateMatchingIconTheme",
+        "title": "Pixels to Punk: Activate Matching Icon Theme",
         "category": "Pixels to Punk"
       }
     ],
