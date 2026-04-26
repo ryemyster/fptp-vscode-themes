@@ -32,6 +32,7 @@ VS Code reads the JSON and SVG files in this repo.
 | `icons/light/` | Holds the light SVG icons. |
 | `icons/pixels-to-punk-cyber-icon-theme.json` | Maps files to dark icons. |
 | `icons/pixels-to-punk-cyber-light-icon-theme.json` | Maps files to light icons. |
+| `producticons/` | Holds the product icon theme and product icon font. |
 | `src/extension.js` | Adds command palette commands, including theme pairs, workspace mood presets, and time-of-day switching. |
 | `scripts/build-theme-variants.js` | Builds theme variants from palettes. |
 | `scripts/build-file-icons.js` | Builds file icons and icon maps. |
@@ -159,6 +160,76 @@ Update file icons when:
 - a file icon is hard to read
 - the dark icon looks good but the light icon does not
 - the light icon looks good but the dark icon does not
+
+## Product Icons
+
+Product icons are the tiny built-in VS Code button icons.
+
+They are not file icons.
+
+They show up in places like:
+
+- Search
+- Source Control
+- Run and Debug
+- Terminal
+- Settings
+- close buttons
+- refresh buttons
+- warning and error icons
+
+This project includes **Pixels to Punk Product Icons**.
+
+It uses the VS Code Codicon font bundled into this extension, then maps common workbench icons to a more Pixels to Punk set of glyphs.
+
+### How People Use Product Icons
+
+1. Open the Command Palette.
+2. Run:
+
+   ```text
+   Preferences: Product Icon Theme
+   ```
+
+3. Pick **Pixels to Punk Product Icons**.
+
+### Where To Update Product Icons
+
+The product icon theme lives here:
+
+```text
+producticons/pixels-to-punk-product-icon-theme.json
+```
+
+The font lives here:
+
+```text
+producticons/pixels-to-punk-product-icons.ttf
+```
+
+The theme is registered in `package.json` under:
+
+```text
+contributes.productIconThemes
+```
+
+### When To Update Product Icons
+
+Update product icons when:
+
+- a common VS Code action still feels too plain
+- an icon is hard to recognize at small size
+- Search, Source Control, Run, Terminal, or Settings need a better glyph
+- warning or error icons lose clarity
+- the product icons stop matching the color themes
+
+### Theme Fit Notes
+
+Product icon themes are single-color.
+
+VS Code chooses the color from the active color theme.
+
+That means the product icon theme should use clear shapes, not tiny details.
 
 ## Theme Fit Rule
 

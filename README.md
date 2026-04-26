@@ -22,6 +22,7 @@ You get:
 
 - 30 color themes
 - 2 icon themes
+- 1 product icon theme
 - dark themes
 - light themes
 - lower-glare themes
@@ -39,6 +40,8 @@ The icon themes are:
 - **Pixels to Punk Cyber Icons Light**
 
 VS Code can use one icon theme at a time. This extension defaults to **Pixels to Punk Cyber Icons**. If you use a light color theme, you can switch to **Pixels to Punk Cyber Icons Light** yourself.
+
+The product icon theme is **Pixels to Punk Product Icons**. It changes small VS Code button icons like Search, Source Control, Run, Terminal, Settings, close, refresh, warning, and error icons.
 
 The file icons cover common things like JavaScript, TypeScript, React, HTML, CSS, JSON, Markdown, shell scripts, Git files, Docker files, YAML, Python, Rust, Go, `.env`, `package.json`, `README.md`, license files, config files, and GitHub files.
 
