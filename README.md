@@ -29,6 +29,7 @@ You get:
 - special file icons for common code files
 - workspace mood presets
 - optional time-of-day theme switching
+- commands that pair matching colors and icons
 - terminal colors
 - Git, Problems, Debug Console, and Output panel colors
 
@@ -60,6 +61,8 @@ It can change:
 It can also apply optional workspace mood presets. A mood preset is one command that picks a color theme, icon theme, and a few editor settings for the folder you have open.
 
 It can also switch themes by time of day if you turn that on for a workspace.
+
+It can also apply matching color-theme and icon-theme pairs with one command.
 
 It does not change your code.
 

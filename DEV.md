@@ -32,7 +32,7 @@ VS Code reads the JSON and SVG files in this repo.
 | `icons/light/` | Holds the light SVG icons. |
 | `icons/pixels-to-punk-cyber-icon-theme.json` | Maps files to dark icons. |
 | `icons/pixels-to-punk-cyber-light-icon-theme.json` | Maps files to light icons. |
-| `src/extension.js` | Adds command palette commands, including workspace mood presets and time-of-day switching. |
+| `src/extension.js` | Adds command palette commands, including theme pairs, workspace mood presets, and time-of-day switching. |
 | `scripts/build-theme-variants.js` | Builds theme variants from palettes. |
 | `scripts/build-file-icons.js` | Builds file icons and icon maps. |
 | `scripts/terminal-colors.js` | Prints terminal colors for testing. |
@@ -288,6 +288,79 @@ Update presets when:
 - a dark preset needs a dark icon theme
 - users need a clearer reset path
 - a new mood gets added
+
+## Matching Theme Pair Commands
+
+A matching theme pair is one command that sets:
+
+- `workbench.colorTheme`
+- `workbench.iconTheme`
+
+It is useful when a person wants the color theme and icon theme to match without picking both by hand.
+
+### Current Pairs
+
+| Pair | Color Theme | Icon Theme |
+| --- | --- | --- |
+| Cyber Dark | Pixels to Punk Cyber Dark | Pixels to Punk Cyber Icons |
+| Cyber Light | Pixels to Punk Cyber Light | Pixels to Punk Cyber Icons Light |
+| Soft Focus Day | Pixels to Punk Soft Focus Day | Pixels to Punk Cyber Icons Light |
+| Soft Focus Night | Pixels to Punk Soft Focus Night | Pixels to Punk Cyber Icons |
+| High Contrast Dark | Pixels to Punk Original High Contrast | Pixels to Punk Cyber Icons |
+| High Contrast Light | Pixels to Punk Electric Sticker Sheet High Contrast | Pixels to Punk Cyber Icons Light |
+
+### How People Use Them
+
+Run:
+
+```text
+Pixels to Punk: Pick Matching Theme Pair
+```
+
+They can also run a pair directly:
+
+- `Pixels to Punk: Activate Cyber Dark Pair`
+- `Pixels to Punk: Activate Cyber Light Pair`
+- `Pixels to Punk: Activate Soft Focus Day Pair`
+- `Pixels to Punk: Activate Soft Focus Night Pair`
+- `Pixels to Punk: Activate High Contrast Dark Pair`
+- `Pixels to Punk: Activate High Contrast Light Pair`
+
+To only fix the icon theme for the current color theme, run:
+
+```text
+Pixels to Punk: Activate Matching Icon Theme
+```
+
+### Where To Update Pairs
+
+The pair list lives in:
+
+```text
+src/extension.js
+```
+
+The command list lives in `package.json` under:
+
+```text
+contributes.commands
+```
+
+The command activation list lives in `package.json` under:
+
+```text
+activationEvents
+```
+
+### When To Update Pairs
+
+Update matching pairs when:
+
+- a theme should have a different icon theme
+- a new common pair is needed
+- a light theme needs light icons
+- a dark theme needs dark icons
+- a high-contrast theme needs a clearer icon pairing
 
 ## Time-Of-Day Theme Switching
 

@@ -130,10 +130,113 @@ const timeOfDayParts = [
   }
 ];
 
+const themePairs = [
+  {
+    id: "cyberDark",
+    label: "Cyber Dark",
+    description: "Classic dark cyber colors with dark icons.",
+    command: "pixelsToPunk.activateCyberDarkPair",
+    colorTheme: "Pixels to Punk Cyber Dark",
+    iconTheme: "pixels-to-punk-cyber-icons"
+  },
+  {
+    id: "cyberLight",
+    label: "Cyber Light",
+    description: "Classic light cyber colors with light icons.",
+    command: "pixelsToPunk.activateCyberLightPair",
+    colorTheme: "Pixels to Punk Cyber Light",
+    iconTheme: "pixels-to-punk-cyber-icons-light"
+  },
+  {
+    id: "softFocusDay",
+    label: "Soft Focus Day",
+    description: "Lower-glare light colors with light icons.",
+    command: "pixelsToPunk.activateSoftFocusDayPair",
+    colorTheme: "Pixels to Punk Soft Focus Day",
+    iconTheme: "pixels-to-punk-cyber-icons-light"
+  },
+  {
+    id: "softFocusNight",
+    label: "Soft Focus Night",
+    description: "Lower-glare dark colors with dark icons.",
+    command: "pixelsToPunk.activateSoftFocusNightPair",
+    colorTheme: "Pixels to Punk Soft Focus Night",
+    iconTheme: "pixels-to-punk-cyber-icons"
+  },
+  {
+    id: "highContrastDark",
+    label: "High Contrast Dark",
+    description: "Strong dark readability with dark icons.",
+    command: "pixelsToPunk.activateHighContrastDarkPair",
+    colorTheme: "Pixels to Punk Original High Contrast",
+    iconTheme: "pixels-to-punk-cyber-icons"
+  },
+  {
+    id: "highContrastLight",
+    label: "High Contrast Light",
+    description: "Strong light readability with light icons.",
+    command: "pixelsToPunk.activateHighContrastLightPair",
+    colorTheme: "Pixels to Punk Electric Sticker Sheet High Contrast",
+    iconTheme: "pixels-to-punk-cyber-icons-light"
+  }
+];
+
 async function updateSetting(key, value) {
   await vscode.workspace
     .getConfiguration()
     .update(key, value, vscode.ConfigurationTarget.Workspace);
+}
+
+async function applyThemePair(pair) {
+  if (!hasWorkspace()) {
+    showOpenWorkspaceMessage();
+    return;
+  }
+
+  await updateSetting("workbench.colorTheme", pair.colorTheme);
+  await updateSetting("workbench.iconTheme", pair.iconTheme);
+
+  vscode.window.showInformationMessage(
+    `Pixels to Punk ${pair.label} pair applied to workspace settings.`
+  );
+}
+
+async function pickThemePair() {
+  const selection = await vscode.window.showQuickPick(
+    themePairs.map((pair) => ({
+      label: pair.label,
+      description: pair.description,
+      pair
+    })),
+    {
+      title: "Pick a Pixels to Punk matching theme pair",
+      placeHolder: "Choose a color theme and matching icon theme"
+    }
+  );
+
+  if (selection) {
+    await applyThemePair(selection.pair);
+  }
+}
+
+async function activateMatchingIconTheme() {
+  if (!hasWorkspace()) {
+    showOpenWorkspaceMessage();
+    return;
+  }
+
+  const currentTheme = vscode.workspace
+    .getConfiguration("workbench")
+    .get("colorTheme", "");
+  const lightThemeWords = ["Light", "Day", "Candy", "Photocopy", "Mall", "Electric", "Zine"];
+  const iconTheme = lightThemeWords.some((word) => currentTheme.includes(word))
+    ? "pixels-to-punk-cyber-icons-light"
+    : "pixels-to-punk-cyber-icons";
+
+  await updateSetting("workbench.iconTheme", iconTheme);
+  vscode.window.showInformationMessage(
+    "Pixels to Punk matching icon theme applied to workspace settings."
+  );
 }
 
 function hasWorkspace() {
@@ -304,6 +407,11 @@ function activate(context) {
       "pixelsToPunk.disableTimeOfDaySwitching",
       disableTimeOfDaySwitching
     ),
+    vscode.commands.registerCommand("pixelsToPunk.pickThemePair", pickThemePair),
+    vscode.commands.registerCommand(
+      "pixelsToPunk.activateMatchingIconTheme",
+      activateMatchingIconTheme
+    ),
     vscode.workspace.onDidChangeConfiguration((event) => {
       if (event.affectsConfiguration(TIME_OF_DAY_NAMESPACE)) {
         maybeApplyAutomaticTimeOfDayTheme();
@@ -314,6 +422,12 @@ function activate(context) {
   for (const preset of presets) {
     context.subscriptions.push(
       vscode.commands.registerCommand(preset.command, () => applyPreset(preset))
+    );
+  }
+
+  for (const pair of themePairs) {
+    context.subscriptions.push(
+      vscode.commands.registerCommand(pair.command, () => applyThemePair(pair))
     );
   }
 

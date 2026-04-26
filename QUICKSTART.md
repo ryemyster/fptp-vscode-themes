@@ -53,6 +53,37 @@ So if you pick a light color theme, you may want to pick the light icon theme yo
 
 Now your folders and files should have Pixels to Punk icons.
 
+## Optional: Pick A Matching Pair
+
+A matching pair changes the color theme and icon theme together.
+
+That means you do not have to pick them one at a time.
+
+1. Open a project folder in VS Code.
+2. Press `Command + Shift + P`.
+3. Type:
+
+   ```text
+   Pixels to Punk: Pick Matching Theme Pair
+   ```
+
+4. Pick a pair.
+
+You can also run direct commands like:
+
+- `Pixels to Punk: Activate Cyber Dark Pair`
+- `Pixels to Punk: Activate Cyber Light Pair`
+- `Pixels to Punk: Activate Soft Focus Day Pair`
+- `Pixels to Punk: Activate Soft Focus Night Pair`
+- `Pixels to Punk: Activate High Contrast Dark Pair`
+- `Pixels to Punk: Activate High Contrast Light Pair`
+
+If you already picked a color theme and only want the icon theme fixed, run:
+
+```text
+Pixels to Punk: Activate Matching Icon Theme
+```
+
 ## Optional: Pick A Workspace Mood
 
 A mood preset is a shortcut.
