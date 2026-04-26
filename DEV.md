@@ -36,6 +36,7 @@ VS Code reads the JSON and SVG files in this repo.
 | `src/extension.js` | Adds command palette commands, including theme pairs, workspace mood presets, and time-of-day switching. |
 | `scripts/build-theme-variants.js` | Builds theme variants from palettes. |
 | `scripts/build-file-icons.js` | Builds file icons and icon maps. |
+| `scripts/build-status-bar-states.js` | Builds status bar warning, error, remote, debug, and hover colors. |
 | `scripts/terminal-colors.js` | Prints terminal colors for testing. |
 | `README.md` | Home page for the repo. |
 | `QUICKSTART.md` | Short install guide for users. |
@@ -540,6 +541,76 @@ The default day theme uses light icons because it is a light theme.
 The default evening and night themes use dark icons because they are dark themes.
 
 If a future default uses a high-contrast theme, check the icon theme too. The pair should be readable, not just colorful.
+
+## Status Bar States
+
+The status bar is the strip at the bottom of VS Code.
+
+It can show different states:
+
+- normal
+- no folder open
+- debugging
+- remote window
+- warning
+- error
+- hover
+- active item
+
+This project gives those states clear colors in every theme.
+
+### What It Changes
+
+The status bar builder updates:
+
+- `statusBar.background`
+- `statusBar.foreground`
+- `statusBar.noFolderBackground`
+- `statusBar.noFolderForeground`
+- `statusBar.debuggingBackground`
+- `statusBar.debuggingForeground`
+- `statusBarItem.activeBackground`
+- `statusBarItem.activeForeground`
+- `statusBarItem.hoverBackground`
+- `statusBarItem.remoteBackground`
+- `statusBarItem.remoteForeground`
+- `statusBarItem.errorBackground`
+- `statusBarItem.errorForeground`
+- `statusBarItem.warningBackground`
+- `statusBarItem.warningForeground`
+
+### Where To Update It
+
+The builder lives here:
+
+```text
+scripts/build-status-bar-states.js
+```
+
+Run it with:
+
+```sh
+npm run build:status-bar-states
+```
+
+The release workflows run it before packaging.
+
+### When To Update It
+
+Update status bar states when:
+
+- debug mode is not obvious enough
+- warning or error items are hard to read
+- remote status blends into the normal status bar
+- a light theme needs darker status bar text
+- a dark theme needs brighter status bar text
+- hover or active items are too subtle
+
+### Theme Fit Notes
+
+The builder picks colors from each theme's own palette.
+
+That keeps neon themes loud, soft themes calmer, and high-contrast themes readable.
 
 ## Test Terminal Colors
 
