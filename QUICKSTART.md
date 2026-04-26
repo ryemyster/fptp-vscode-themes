@@ -53,6 +53,47 @@ So if you pick a light color theme, you may want to pick the light icon theme yo
 
 Now your folders and files should have Pixels to Punk icons.
 
+## Optional: Pick A Workspace Mood
+
+A mood preset is a shortcut.
+
+It picks a color theme, an icon theme, and a few editor settings for the folder you have open.
+
+It does not change your code.
+
+It only changes VS Code settings for that workspace.
+
+1. Open a project folder in VS Code.
+2. Press `Command + Shift + P`.
+3. Type:
+
+   ```text
+   Pixels to Punk: Pick Workspace Mood Preset
+   ```
+
+4. Pick a mood.
+
+The moods are:
+
+- **Deep Work**: quiet dark colors with fewer distractions
+- **Terminal Night**: CRT colors for terminal-heavy work
+- **Zine Shop**: warm light colors for docs and notes
+- **Maximum Neon**: the loudest neon setup
+- **Low Glare**: softer colors for tired eyes
+
+To undo a mood preset:
+
+1. Press `Command + Shift + P`.
+2. Type:
+
+   ```text
+   Pixels to Punk: Reset Workspace Mood Preset
+   ```
+
+3. Press Enter.
+
+That clears the settings the mood preset changed.
+
 ## If The Theme Does Not Show Up
 
 Sometimes VS Code needs a quick refresh.
