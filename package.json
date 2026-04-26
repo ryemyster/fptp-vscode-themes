@@ -2,7 +2,7 @@
   "name": "pixels-to-punk-cyber",
   "displayName": "Pixels to Punk Cyber",
   "description": "Neon punk VS Code themes inspired by the From Pixels to Punk brand, with anime-pop color, punk energy, and coding comfort.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "local",
   "license": "MIT",
   "repository": {
@@ -121,6 +121,71 @@
         "label": "Pixels to Punk Riot Glow Light",
         "uiTheme": "vs",
         "path": "./themes/pixels-to-punk-riot-glow-light-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Sticker Bomb Sunset",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-sticker-bomb-sunset-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Laser Lemonade",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-laser-lemonade-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Bubblegum Bruise",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-bubblegum-bruise-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Punk Pool Party",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-punk-pool-party-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Cherry CRT",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-cherry-crt-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Electric Sticker Sheet",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-electric-sticker-sheet-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Zine Shop Window",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-zine-shop-window-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Blacklight Slushie",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-blacklight-slushie-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Toxic Valentine",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-toxic-valentine-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Arcade Raincoat",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-arcade-raincoat-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Original",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-original-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Original High Contrast",
+        "uiTheme": "hc-black",
+        "path": "./themes/pixels-to-punk-original-high-contrast-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Electric Sticker Sheet High Contrast",
+        "uiTheme": "hc-light",
+        "path": "./themes/pixels-to-punk-electric-sticker-sheet-high-contrast-color-theme.json"
       }
     ]
   },
@@ -128,7 +193,7 @@
     "clean": "rm -rf node_modules pixels-to-punk-cyber-*.vsix",
     "demo:terminal-colors": "node scripts/terminal-colors.js",
     "package": "npx --no-install vsce package --allow-missing-repository",
-    "install:vsix": "code --install-extension pixels-to-punk-cyber-1.0.2.vsix --force"
+    "install:vsix": "code --install-extension pixels-to-punk-cyber-1.0.3.vsix --force"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.9.1"

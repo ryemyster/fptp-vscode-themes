@@ -28,7 +28,7 @@ That is it. VS Code has new clothes now.
 
 If you just want to use the themes, download the `.vsix` file from the latest GitHub Release and install it in VS Code.
 
-You get seventeen color themes and two icon themes.
+You get thirty color themes and two icon themes.
 
 | Theme | Mode | What it feels like | Best for |
 | --- | --- | --- | --- |
@@ -38,17 +38,30 @@ You get seventeen color themes and two icon themes.
 | **Pixels to Punk Cyber Light for Those with Glasses** | Light | A researched lower-glare Cyber Light remix with a warmer background, reduced white glare, and readable muted accents. | Eye strain, glasses, contacts, bright rooms, and W3C/WCAG-aware readability. |
 | **Pixels to Punk Neon Backstage** | Dark | Electric concert-night color with intense cyan, pink, and violet energy. | Maximum cyberpop drama. |
 | **Pixels to Punk Basement Flyer** | Dark | A gritty zine-poster palette with worn paper warmth and underground-show reds. | Punk texture without going fully neon. |
-| **Pixels to Punk CRT After Midnight** | Dark | Retro terminal glow with teal glass, green phosphor, and late-night amber. | Terminal-heavy work and nostalgic screens. |
+| **Pixels to Punk CRT After Midnight** | Dark | Retro terminal glow with teal glass, cyan phosphor, and late-night amber. | Terminal-heavy work and nostalgic screens. |
 | **Pixels to Punk Candy Static** | Light | Bright arcade candy colors with playful pinks, blues, and yellows. | A high-energy light theme. |
 | **Pixels to Punk Streetlight Noir** | Dark | Cinematic late-night contrast with streetlight warmth and noir edges. | Dark workspaces that still want atmosphere. |
 | **Pixels to Punk Soft Focus Day** | Light | A calmer light palette with lower-glare surfaces and gentler accents. | Eye strain, daylight coding, and softer contrast. |
 | **Pixels to Punk Soft Focus Night** | Dark | A lower-luminance dark palette with softer text and less electric glare. | Eye strain, dim rooms, and long night sessions. |
 | **Pixels to Punk Rainy Arcade** | Dark | Blue rain, cyan glass, hot pink signage, and arcade-reflection color. | Moody neon without full saturation. |
 | **Pixels to Punk Photocopy Riot** | Light | Stark zine-paper contrast with red markup and blue ink. | Print-like light theme energy. |
-| **Pixels to Punk Afterparty Aquarium** | Dark | Deep teal nightlife with coral signage and soft green highlights. | Oceanic dark UI with party color. |
+| **Pixels to Punk Afterparty Aquarium** | Dark | Deep teal nightlife with coral signage and soft cyan highlights. | Oceanic dark UI with party color. |
 | **Pixels to Punk Mall Goth Daydream** | Light | Lavender daylight, dark lipstick accents, and cooled-down neon. | A softer alt-pop light theme. |
-| **Pixels to Punk Riot Glow Dark** | Dark | Saturated violet chrome with cyan, neon pink, acid green, and arcade yellow. | The loudest dark theme in the pack. |
-| **Pixels to Punk Riot Glow Light** | Light | Bright lavender paper with the same cyan, neon pink, acid green, and arcade yellow punch. | The loudest light theme in the pack. |
+| **Pixels to Punk Riot Glow Dark** | Dark | Saturated violet chrome with cyan, neon pink, red-orange, and arcade yellow. | The loudest dark theme in the pack. |
+| **Pixels to Punk Riot Glow Light** | Light | Bright lavender paper with the same cyan, neon pink, red-orange, and arcade yellow punch. | The loudest light theme in the pack. |
+| **Pixels to Punk Sticker Bomb Sunset** | Dark | Warm hot-pink stickers, orange signage, and cyan ink on a violet night base. | A warmer punk-pop dark theme. |
+| **Pixels to Punk Laser Lemonade** | Dark | Electric yellow, cyan, and magenta on crisp blue-black chrome. | High-energy coding without the full violet wash. |
+| **Pixels to Punk Bubblegum Bruise** | Dark | Bubblegum pink, bruised violet, cyan edge light, and soft orange syntax. | Cute-night neon with a harder outline. |
+| **Pixels to Punk Punk Pool Party** | Dark | Deep teal-blue surfaces with coral signage, cyan controls, and yellow glow. | A brighter aqua nightlife mood. |
+| **Pixels to Punk Cherry CRT** | Dark | Cherry red, cyan phosphor, violet type, and warm terminal amber. | Retro punk terminals without green phosphor. |
+| **Pixels to Punk Electric Sticker Sheet** | Light | White sticker paper, electric violet, cyan-blue, yellow, and poster orange. | A crisp branded light theme. |
+| **Pixels to Punk Zine Shop Window** | Light | Warm shop-window paper with black ink, blue signage, and hot pink markup. | Zine energy with higher light-theme clarity. |
+| **Pixels to Punk Blacklight Slushie** | Dark | Blue-black slush, violet glow, cyan signage, and neon pink accents. | The most logo-faithful new dark remix. |
+| **Pixels to Punk Toxic Valentine** | Dark | Hot pink, violet-blue, coral-orange, and midnight purple. | Punk romance without leaving the brand palette. |
+| **Pixels to Punk Arcade Raincoat** | Dark | Rainy navy, cyan-blue reflections, hot pink signs, and yellow street glow. | Moody arcade rain with strong readability. |
+| **Pixels to Punk Original** | Dark | Sampled from the FPTP image: blue-black, indigo, violet, cyan, hot pink, coral-red, and white. | The closest match to the source artwork. |
+| **Pixels to Punk Original High Contrast** | High Contrast Dark | The source-art palette tightened for stronger text, borders, and selections. | Maximum readability while staying FPTP. |
+| **Pixels to Punk Electric Sticker Sheet High Contrast** | High Contrast Light | A sharper light sticker palette with deeper text and stronger controls. | Bright-room readability with brand color. |
 
 The icon themes are **Pixels to Punk Cyber Icons** and **Pixels to Punk Cyber Icons Light**.
 
@@ -130,10 +143,23 @@ The important files are:
 - `themes/pixels-to-punk-soft-focus-night-color-theme.json`: lower-luminance dark colors for dimmer rooms.
 - `themes/pixels-to-punk-rainy-arcade-color-theme.json`: blue rain, cyan glass, and hot pink arcade glow.
 - `themes/pixels-to-punk-photocopy-riot-color-theme.json`: stark zine-paper contrast with red markup and blue ink.
-- `themes/pixels-to-punk-afterparty-aquarium-color-theme.json`: deep teal nightlife with coral signage and soft green highlights.
+- `themes/pixels-to-punk-afterparty-aquarium-color-theme.json`: deep teal nightlife with coral signage and soft cyan highlights.
 - `themes/pixels-to-punk-mall-goth-daydream-color-theme.json`: lavender daylight, dark lipstick accents, and cooled-down neon.
-- `themes/pixels-to-punk-riot-glow-dark-color-theme.json`: saturated violet chrome with cyan, neon pink, acid green, and arcade yellow.
-- `themes/pixels-to-punk-riot-glow-light-color-theme.json`: bright lavender paper with the same cyan, neon pink, acid green, and arcade yellow punch.
+- `themes/pixels-to-punk-riot-glow-dark-color-theme.json`: saturated violet chrome with cyan, neon pink, red-orange, and arcade yellow.
+- `themes/pixels-to-punk-riot-glow-light-color-theme.json`: bright lavender paper with the same cyan, neon pink, red-orange, and arcade yellow punch.
+- `themes/pixels-to-punk-sticker-bomb-sunset-color-theme.json`: warm hot-pink stickers, orange signage, and cyan ink.
+- `themes/pixels-to-punk-laser-lemonade-color-theme.json`: electric yellow, cyan, and magenta on blue-black chrome.
+- `themes/pixels-to-punk-bubblegum-bruise-color-theme.json`: bubblegum pink, bruised violet, cyan edge light, and orange syntax.
+- `themes/pixels-to-punk-punk-pool-party-color-theme.json`: teal-blue surfaces with coral signage and cyan controls.
+- `themes/pixels-to-punk-cherry-crt-color-theme.json`: cherry red, cyan phosphor, violet type, and warm terminal amber.
+- `themes/pixels-to-punk-electric-sticker-sheet-color-theme.json`: white sticker paper with electric violet and cyan-blue.
+- `themes/pixels-to-punk-zine-shop-window-color-theme.json`: warm shop-window paper with black ink, blue signage, and hot pink markup.
+- `themes/pixels-to-punk-blacklight-slushie-color-theme.json`: blue-black slush, violet glow, cyan signage, and neon pink accents.
+- `themes/pixels-to-punk-toxic-valentine-color-theme.json`: hot pink, violet-blue, coral-orange, and midnight purple.
+- `themes/pixels-to-punk-arcade-raincoat-color-theme.json`: rainy navy, cyan-blue reflections, hot pink signs, and yellow street glow.
+- `themes/pixels-to-punk-original-color-theme.json`: source-art sampled FPTP image colors.
+- `themes/pixels-to-punk-original-high-contrast-color-theme.json`: source-art palette tightened for high contrast.
+- `themes/pixels-to-punk-electric-sticker-sheet-high-contrast-color-theme.json`: high-contrast light sticker palette.
 - `icons/pixels-to-punk-cyber-icon-theme.json`: the matching folder icons.
 
 ## Try It Right Now
@@ -252,7 +278,7 @@ To test the terminal colors, run:
 npm run demo:terminal-colors
 ```
 
-You should see red, green, yellow, blue, magenta, cyan, white, and bright versions of those colors.
+You should see red, yellow, blue, magenta, cyan, white, and bright versions of those colors.
 
 If that test is colorful, the theme is working.
 
@@ -501,7 +527,7 @@ Light theme:
 - Main text: dark ink.
 - Keywords: punchy magenta.
 - Functions: deep cyan.
-- Strings: readable green.
+- Strings: readable cyan.
 - Numbers: warm amber.
 
 Neon Backstage:
@@ -524,11 +550,11 @@ Basement Flyer:
 
 CRT After Midnight:
 
-- Background: deep blue-green black.
+- Background: deep blue-black.
 - Main text: phosphor mint.
 - Keywords: synth magenta.
 - Functions: electric teal.
-- Strings: green monitor glow.
+- Strings: cyan monitor glow.
 - Numbers: amber terminal light.
 
 Candy Static:
@@ -537,7 +563,7 @@ Candy Static:
 - Main text: dark ink.
 - Keywords: bubblegum magenta.
 - Functions: arcade blue.
-- Strings: clean green.
+- Strings: clean cyan.
 - Numbers: caramel amber.
 
 Streetlight Noir:
