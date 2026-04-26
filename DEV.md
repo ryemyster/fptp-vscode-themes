@@ -365,37 +365,33 @@ That command reads the version from `package.json`, then installs the matching `
 
 ## GitHub Releases
 
-This repo has two GitHub Actions for releases.
+This repo releases from `main`.
 
-### Easy Release
+When a PR is merged into `main`, **Version and Release VSIX** reads the version in `package.json`.
 
-Use **Version and Release VSIX** when you want GitHub to do the release work.
+If that version does not have a GitHub Release yet, the workflow:
 
-To run it by hand:
+1. rebuilds generated theme variants
+2. rebuilds generated file icons
+3. builds the `.vsix` file
+4. creates the `v` tag
+5. publishes the GitHub Release
 
-1. Open the repo on GitHub.
-2. Click **Actions**.
-3. Click **Version and Release VSIX**.
-4. Click **Run workflow**.
-5. Type the new version number.
-6. Click **Run workflow**.
-
-Example version:
+Example:
 
 ```text
 1.0.5
 ```
 
-That workflow:
+That becomes:
 
-1. updates `package.json`
-2. updates `package-lock.json`
-3. rebuilds generated theme variants
-4. rebuilds generated file icons
-5. builds the `.vsix` file
-6. commits the version bump to `main`
-7. creates the `v` tag
-8. publishes the GitHub Release
+```text
+v1.0.5
+```
+
+If that release already exists, the workflow exits without publishing another one.
+
+You can also run **Version and Release VSIX** by hand from the GitHub Actions page. The manual run uses the version already in `package.json`.
 
 ### Build Only
 
@@ -407,30 +403,30 @@ The workflow rebuilds generated theme variants and generated file icons before p
 
 ## Release Checklist
 
-Use this checklist if you release by hand instead of using **Version and Release VSIX**.
+Use this checklist in a feature PR when the change should create a new release after merge.
 
 1. Open `package.json`.
 2. Change the version number.
 3. Open `package-lock.json`.
 4. Change the root version numbers to match.
-5. Run:
+5. Run the normal checks:
 
    ```sh
+   npm run build:file-icons
    npm run package
    ```
 
 6. Commit the changes.
-7. Tag the commit with the same version.
-8. Push the commit and tag.
+7. Open a PR.
+8. Merge the PR into `main`.
+9. Wait for **Version and Release VSIX** to publish the release.
 
 Example:
 
 ```sh
 git add .
-git commit -m "Release v1.0.5"
-git tag v1.0.5
-git push origin main
-git push origin v1.0.5
+git commit -m "Bump release to v1.0.5"
+git push
 ```
 
 ## If The `code` Command Does Not Work
