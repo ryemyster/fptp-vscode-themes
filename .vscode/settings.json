@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Pixels to Punk Cyber Dark for Those with Glasses",
+    "workbench.iconTheme": "pixels-to-punk-cyber-icons",
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorBlinking": "smooth",
+    "editor.wordWrap": "off",
+    "terminal.integrated.tabs.enabled": false
+}
