@@ -5,6 +5,7 @@
   "version": "1.0.3",
   "publisher": "local",
   "license": "MIT",
+  "main": "./src/extension.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/ryemyster/fptp-vscode-themes.git"
@@ -20,7 +21,53 @@
     "Themes",
     "Other"
   ],
+  "activationEvents": [
+    "onCommand:pixelsToPunk.pickMoodPreset",
+    "onCommand:pixelsToPunk.applyDeepWorkPreset",
+    "onCommand:pixelsToPunk.applyTerminalNightPreset",
+    "onCommand:pixelsToPunk.applyZineShopPreset",
+    "onCommand:pixelsToPunk.applyMaximumNeonPreset",
+    "onCommand:pixelsToPunk.applyLowGlarePreset",
+    "onCommand:pixelsToPunk.resetMoodPreset"
+  ],
   "contributes": {
+    "commands": [
+      {
+        "command": "pixelsToPunk.pickMoodPreset",
+        "title": "Pixels to Punk: Pick Workspace Mood Preset",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.applyDeepWorkPreset",
+        "title": "Pixels to Punk: Apply Deep Work Preset",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.applyTerminalNightPreset",
+        "title": "Pixels to Punk: Apply Terminal Night Preset",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.applyZineShopPreset",
+        "title": "Pixels to Punk: Apply Zine Shop Preset",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.applyMaximumNeonPreset",
+        "title": "Pixels to Punk: Apply Maximum Neon Preset",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.applyLowGlarePreset",
+        "title": "Pixels to Punk: Apply Low Glare Preset",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.resetMoodPreset",
+        "title": "Pixels to Punk: Reset Workspace Mood Preset",
+        "category": "Pixels to Punk"
+      }
+    ],
     "iconThemes": [
       {
         "id": "pixels-to-punk-cyber-icons",

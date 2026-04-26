@@ -27,6 +27,7 @@ You get:
 - lower-glare themes
 - high-contrast themes
 - special file icons for common code files
+- workspace mood presets
 - terminal colors
 - Git, Problems, Debug Console, and Output panel colors
 
@@ -54,6 +55,8 @@ It can change:
 - warning and error colors
 - folder icons
 - file icons
+
+It can also apply optional workspace mood presets. A mood preset is one command that picks a color theme, icon theme, and a few editor settings for the folder you have open.
 
 It does not change your code.
 

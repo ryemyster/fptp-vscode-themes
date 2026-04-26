@@ -32,6 +32,7 @@ VS Code reads the JSON and SVG files in this repo.
 | `icons/light/` | Holds the light SVG icons. |
 | `icons/pixels-to-punk-cyber-icon-theme.json` | Maps files to dark icons. |
 | `icons/pixels-to-punk-cyber-light-icon-theme.json` | Maps files to light icons. |
+| `src/extension.js` | Adds command palette commands, including workspace mood presets. |
 | `scripts/build-theme-variants.js` | Builds theme variants from palettes. |
 | `scripts/build-file-icons.js` | Builds file icons and icon maps. |
 | `scripts/terminal-colors.js` | Prints terminal colors for testing. |
@@ -187,6 +188,106 @@ When you add a new thing, ask:
 The goal is not to make every theme identical.
 
 The goal is to make every theme feel like it belongs.
+
+## Workspace Mood Presets
+
+A workspace mood preset is one command that changes a few VS Code settings for the folder a person has open.
+
+It is opt-in.
+
+It does not run automatically.
+
+It does not change code.
+
+It only writes workspace settings.
+
+If no folder or workspace is open, the command shows a warning and does not change anything.
+
+### What The Presets Change
+
+Each preset can change:
+
+- `workbench.colorTheme`
+- `workbench.iconTheme`
+- `editor.minimap.enabled`
+- `editor.stickyScroll.enabled`
+- `editor.guides.bracketPairs`
+- `editor.bracketPairColorization.enabled`
+- `editor.renderWhitespace`
+- `editor.cursorBlinking`
+- `editor.wordWrap`
+- `terminal.integrated.tabs.enabled`
+
+### Current Presets
+
+| Preset | Color Theme | Icon Theme | Why It Exists |
+| --- | --- | --- | --- |
+| Deep Work | Pixels to Punk Cyber Dark for Those with Glasses | Pixels to Punk Cyber Icons | Quiet dark setup for focused work. |
+| Terminal Night | Pixels to Punk CRT After Midnight | Pixels to Punk Cyber Icons | Terminal-heavy setup with CRT energy. |
+| Zine Shop | Pixels to Punk Zine Shop Window | Pixels to Punk Cyber Icons Light | Warm light setup for docs and notes. |
+| Maximum Neon | Pixels to Punk Riot Glow Dark | Pixels to Punk Cyber Icons | Loud neon setup. |
+| Low Glare | Pixels to Punk Soft Focus Night | Pixels to Punk Cyber Icons | Softer setup for tired eyes. |
+
+### How People Use Them
+
+1. Open a folder in VS Code.
+2. Open the Command Palette.
+3. Run:
+
+   ```text
+   Pixels to Punk: Pick Workspace Mood Preset
+   ```
+
+4. Pick a mood.
+
+They can also run a preset directly:
+
+- `Pixels to Punk: Apply Deep Work Preset`
+- `Pixels to Punk: Apply Terminal Night Preset`
+- `Pixels to Punk: Apply Zine Shop Preset`
+- `Pixels to Punk: Apply Maximum Neon Preset`
+- `Pixels to Punk: Apply Low Glare Preset`
+
+### How People Undo Them
+
+Run:
+
+```text
+Pixels to Punk: Reset Workspace Mood Preset
+```
+
+That clears the settings listed above from workspace settings.
+
+### Where To Update Presets
+
+The preset code lives here:
+
+```text
+src/extension.js
+```
+
+The command list lives in `package.json` under:
+
+```text
+contributes.commands
+```
+
+The command activation list lives in `package.json` under:
+
+```text
+activationEvents
+```
+
+### When To Update Presets
+
+Update presets when:
+
+- a new theme becomes a better fit for a mood
+- a setting feels too noisy or too quiet
+- a light preset needs a light icon theme
+- a dark preset needs a dark icon theme
+- users need a clearer reset path
+- a new mood gets added
 
 ## Test Terminal Colors
 
