@@ -31,6 +31,7 @@ You get:
 - workspace mood presets
 - optional time-of-day theme switching
 - commands that pair matching colors and icons
+- clearer status bar states
 - terminal colors
 - Git, Problems, Debug Console, and Output panel colors
 

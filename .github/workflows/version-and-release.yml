@@ -73,6 +73,10 @@ jobs:
         if: steps.existing_release.outputs.exists == 'false'
         run: npm run build:file-icons
 
+      - name: Build generated status bar states
+        if: steps.existing_release.outputs.exists == 'false'
+        run: npm run build:status-bar-states
+
       - name: Package VS Code extension
         if: steps.existing_release.outputs.exists == 'false'
         run: npm run package

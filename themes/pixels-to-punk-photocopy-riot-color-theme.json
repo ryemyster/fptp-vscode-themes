@@ -105,7 +105,7 @@
     "sideBarSectionHeader.background": "#FFFFFF",
     "sideBarSectionHeader.foreground": "#050608",
     "statusBar.background": "#E8E7DE",
-    "statusBar.debuggingBackground": "#17191D",
+    "statusBar.debuggingBackground": "#9A5A00",
     "statusBar.debuggingForeground": "#FFFFFF",
     "statusBar.foreground": "#050608",
     "statusBar.noFolderBackground": "#E8E7DE",
@@ -145,7 +145,17 @@
     "titleBar.activeBackground": "#E8E7DE",
     "titleBar.activeForeground": "#050608",
     "titleBar.inactiveBackground": "#FAFAF2",
-    "titleBar.inactiveForeground": "#73706A"
+    "titleBar.inactiveForeground": "#73706A",
+    "statusBar.noFolderForeground": "#050608",
+    "statusBarItem.activeBackground": "#D62246",
+    "statusBarItem.activeForeground": "#FFFFFF",
+    "statusBarItem.hoverBackground": "#F0EFE7",
+    "statusBarItem.remoteBackground": "#005F9E",
+    "statusBarItem.remoteForeground": "#FFFFFF",
+    "statusBarItem.errorBackground": "#C9183A",
+    "statusBarItem.errorForeground": "#FFFFFF",
+    "statusBarItem.warningBackground": "#9A5A00",
+    "statusBarItem.warningForeground": "#FFFFFF"
   },
   "tokenColors": [
     {
