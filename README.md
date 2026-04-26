@@ -35,6 +35,8 @@ The icon themes are:
 - **Pixels to Punk Cyber Icons**
 - **Pixels to Punk Cyber Icons Light**
 
+VS Code can use one icon theme at a time. This extension defaults to **Pixels to Punk Cyber Icons**. If you use a light color theme, you can switch to **Pixels to Punk Cyber Icons Light** yourself.
+
 The file icons cover common things like JavaScript, TypeScript, React, HTML, CSS, JSON, Markdown, shell scripts, Git files, Docker files, YAML, Python, Rust, Go, `.env`, `package.json`, `README.md`, license files, config files, and GitHub files.
 
 ## What This Does

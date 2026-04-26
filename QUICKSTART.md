@@ -32,6 +32,14 @@ That puts the theme pack into VS Code.
 
 ## Pick The File Icons
 
+The extension tries to start with **Pixels to Punk Cyber Icons**.
+
+That is the dark icon theme.
+
+VS Code does not switch icon themes when you switch color themes.
+
+So if you pick a light color theme, you may want to pick the light icon theme yourself.
+
 1. Press `Command + Shift + P`.
 2. Type:
 

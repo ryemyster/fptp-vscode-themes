@@ -43,6 +43,8 @@ VS Code reads the JSON and SVG files in this repo.
 
 Use this when you want to test changes before making a release.
 
+This works because VS Code can run a theme extension from its `package.json`.
+
 1. Open VS Code.
 2. Open this folder: `vscode-themes-vibecoded`.
 3. Press `F5`.
@@ -63,6 +65,10 @@ Use this when you want to test changes before making a release.
    ```
 
 10. Pick **Pixels to Punk Cyber Icons** or **Pixels to Punk Cyber Icons Light**.
+
+The extension defaults to **Pixels to Punk Cyber Icons**.
+
+If you test a light color theme, pick **Pixels to Punk Cyber Icons Light** by hand.
 
 ## Change Theme Colors
 
@@ -275,6 +281,8 @@ git push origin v1.0.3
 ```
 
 The action builds the `.vsix` file and attaches it to the GitHub Release for that tag.
+
+The workflow rebuilds generated theme variants and generated file icons before packaging.
 
 ## Release Checklist
 
