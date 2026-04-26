@@ -191,6 +191,7 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules pixels-to-punk-cyber-*.vsix",
+    "build:file-icons": "node scripts/build-file-icons.js",
     "demo:terminal-colors": "node scripts/terminal-colors.js",
     "package": "npx --no-install vsce package --allow-missing-repository",
     "install:vsix": "code --install-extension pixels-to-punk-cyber-1.0.3.vsix --force"

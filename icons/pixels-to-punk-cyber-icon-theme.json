@@ -14,6 +14,66 @@
     },
     "_root_folder_open": {
       "iconPath": "./root-folder-open.svg"
+    },
+    "_file_js": {
+      "iconPath": "./file-js.svg"
+    },
+    "_file_ts": {
+      "iconPath": "./file-ts.svg"
+    },
+    "_file_react": {
+      "iconPath": "./file-react.svg"
+    },
+    "_file_html": {
+      "iconPath": "./file-html.svg"
+    },
+    "_file_css": {
+      "iconPath": "./file-css.svg"
+    },
+    "_file_json": {
+      "iconPath": "./file-json.svg"
+    },
+    "_file_md": {
+      "iconPath": "./file-md.svg"
+    },
+    "_file_shell": {
+      "iconPath": "./file-shell.svg"
+    },
+    "_file_git": {
+      "iconPath": "./file-git.svg"
+    },
+    "_file_docker": {
+      "iconPath": "./file-docker.svg"
+    },
+    "_file_yaml": {
+      "iconPath": "./file-yaml.svg"
+    },
+    "_file_python": {
+      "iconPath": "./file-python.svg"
+    },
+    "_file_rust": {
+      "iconPath": "./file-rust.svg"
+    },
+    "_file_go": {
+      "iconPath": "./file-go.svg"
+    },
+    "_file_env": {
+      "iconPath": "./file-env.svg"
+    },
+    "_file_config": {
+      "iconPath": "./file-config.svg"
+    },
+    "_file_package": {
+      "iconPath": "./file-package.svg"
+    },
+    "_file_readme": {
+      "iconPath": "./file-readme.svg"
+    },
+    "_file_license": {
+      "iconPath": "./file-license.svg"
+    },
+    "_file_github": {
+      "iconPath": "./file-github.svg"
     }
   },
   "file": "_file",
@@ -22,7 +82,102 @@
   "rootFolder": "_root_folder",
   "rootFolderExpanded": "_root_folder_open",
   "hidesExplorerArrows": false,
-  "languageIds": {},
-  "fileExtensions": {},
-  "fileNames": {}
+  "languageIds": {
+    "javascript": "_file_js",
+    "javascriptreact": "_file_react",
+    "typescript": "_file_ts",
+    "typescriptreact": "_file_react",
+    "html": "_file_html",
+    "css": "_file_css",
+    "scss": "_file_css",
+    "less": "_file_css",
+    "json": "_file_json",
+    "jsonc": "_file_json",
+    "markdown": "_file_md",
+    "shellscript": "_file_shell",
+    "dockerfile": "_file_docker",
+    "yaml": "_file_yaml",
+    "python": "_file_python",
+    "rust": "_file_rust",
+    "go": "_file_go",
+    "gitignore": "_file_git"
+  },
+  "fileExtensions": {
+    "js": "_file_js",
+    "cjs": "_file_js",
+    "mjs": "_file_js",
+    "jsx": "_file_react",
+    "ts": "_file_ts",
+    "mts": "_file_ts",
+    "cts": "_file_ts",
+    "tsx": "_file_react",
+    "html": "_file_html",
+    "htm": "_file_html",
+    "css": "_file_css",
+    "scss": "_file_css",
+    "sass": "_file_css",
+    "less": "_file_css",
+    "json": "_file_json",
+    "jsonc": "_file_json",
+    "md": "_file_md",
+    "markdown": "_file_md",
+    "sh": "_file_shell",
+    "bash": "_file_shell",
+    "zsh": "_file_shell",
+    "fish": "_file_shell",
+    "yml": "_file_yaml",
+    "yaml": "_file_yaml",
+    "py": "_file_python",
+    "rs": "_file_rust",
+    "go": "_file_go",
+    "env": "_file_env",
+    "toml": "_file_config",
+    "ini": "_file_config",
+    "config": "_file_config",
+    "lock": "_file_package"
+  },
+  "fileNames": {
+    ".env": "_file_env",
+    ".env.local": "_file_env",
+    ".env.example": "_file_env",
+    ".env.development": "_file_env",
+    ".env.production": "_file_env",
+    ".env.test": "_file_env",
+    ".gitignore": "_file_git",
+    ".gitattributes": "_file_git",
+    ".gitmodules": "_file_git",
+    "Dockerfile": "_file_docker",
+    "dockerfile": "_file_docker",
+    "docker-compose.yml": "_file_docker",
+    "docker-compose.yaml": "_file_docker",
+    "package.json": "_file_package",
+    "package-lock.json": "_file_package",
+    "npm-shrinkwrap.json": "_file_package",
+    "pnpm-lock.yaml": "_file_package",
+    "yarn.lock": "_file_package",
+    "bun.lockb": "_file_package",
+    "README": "_file_readme",
+    "README.md": "_file_readme",
+    "readme.md": "_file_readme",
+    "LICENSE": "_file_license",
+    "LICENSE.md": "_file_license",
+    "LICENSE.txt": "_file_license",
+    "license": "_file_license",
+    "license.md": "_file_license",
+    "license.txt": "_file_license",
+    "tsconfig.json": "_file_ts",
+    "jsconfig.json": "_file_js",
+    "vite.config.js": "_file_config",
+    "vite.config.ts": "_file_config",
+    "vitest.config.js": "_file_config",
+    "vitest.config.ts": "_file_config",
+    "eslint.config.js": "_file_config",
+    "eslint.config.mjs": "_file_config",
+    "prettier.config.js": "_file_config",
+    ".prettierrc": "_file_config",
+    ".eslintrc": "_file_config",
+    ".github": "_file_github",
+    "dependabot.yml": "_file_github",
+    "dependabot.yaml": "_file_github"
+  }
 }

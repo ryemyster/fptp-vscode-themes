@@ -1,0 +1,339 @@
+# Developer Guide
+
+Use this if you want to change the themes, build the install file, or help with the project.
+
+This guide uses plain words on purpose.
+
+## What This Project Is
+
+This folder is a VS Code extension.
+
+The extension adds:
+
+- color themes
+- file icon themes
+- folder icons
+- terminal colors
+- workbench colors
+
+The extension does not run a server.
+
+The extension does not compile an app.
+
+VS Code reads the JSON and SVG files in this repo.
+
+## Important Places
+
+| File or Folder | What It Does |
+| --- | --- |
+| `package.json` | Tells VS Code what this extension adds. |
+| `themes/` | Holds the color theme JSON files. |
+| `icons/` | Holds the dark icon theme files and dark SVG icons. |
+| `icons/light/` | Holds the light SVG icons. |
+| `icons/pixels-to-punk-cyber-icon-theme.json` | Maps files to dark icons. |
+| `icons/pixels-to-punk-cyber-light-icon-theme.json` | Maps files to light icons. |
+| `scripts/build-theme-variants.js` | Builds theme variants from palettes. |
+| `scripts/build-file-icons.js` | Builds file icons and icon maps. |
+| `scripts/terminal-colors.js` | Prints terminal colors for testing. |
+| `README.md` | Home page for the repo. |
+| `QUICKSTART.md` | Short install guide for users. |
+| `DEV.md` | This developer guide. |
+
+## Try The Extension From Source
+
+Use this when you want to test changes before making a release.
+
+1. Open VS Code.
+2. Open this folder: `vscode-themes-vibecoded`.
+3. Press `F5`.
+4. A second VS Code window opens.
+5. In the second window, press `Command + Shift + P`.
+6. Type:
+
+   ```text
+   Color Theme
+   ```
+
+7. Pick a **Pixels to Punk** theme.
+8. Press `Command + Shift + P` again.
+9. Type:
+
+   ```text
+   File Icon Theme
+   ```
+
+10. Pick **Pixels to Punk Cyber Icons** or **Pixels to Punk Cyber Icons Light**.
+
+## Change Theme Colors
+
+Theme colors live in `themes/`.
+
+To change one:
+
+1. Open a theme JSON file in `themes/`.
+2. Change one color.
+3. Save the file.
+4. Go to the Extension Development Host window.
+5. Run **Developer: Reload Window**.
+
+A color looks like this:
+
+```json
+"editor.background": "#101019"
+```
+
+The part with `#` is the color.
+
+## File Icons
+
+File icons are the tiny pictures beside file names in VS Code.
+
+They help people find files faster.
+
+Examples:
+
+- `index.ts` gets a TypeScript icon.
+- `App.tsx` gets a React icon.
+- `package.json` gets a package icon.
+- `README.md` gets a readme icon.
+- `.env` gets an environment icon.
+
+### Where To Update File Icons
+
+The icon recipe lives here:
+
+```text
+scripts/build-file-icons.js
+```
+
+The generated dark icons live here:
+
+```text
+icons/file-*.svg
+```
+
+The generated light icons live here:
+
+```text
+icons/light/file-*.svg
+```
+
+The dark icon map lives here:
+
+```text
+icons/pixels-to-punk-cyber-icon-theme.json
+```
+
+The light icon map lives here:
+
+```text
+icons/pixels-to-punk-cyber-light-icon-theme.json
+```
+
+### How To Add A File Icon
+
+1. Open `scripts/build-file-icons.js`.
+2. Add a new item to `iconSpecs`.
+3. Add the file extension, file name, or language ID to the right map.
+4. Run:
+
+   ```sh
+   npm run build:file-icons
+   ```
+
+5. Test the icon theme in VS Code.
+
+### When To Update File Icons
+
+Update file icons when:
+
+- a common file still looks plain
+- a new framework becomes important
+- a file icon is hard to read
+- the dark icon looks good but the light icon does not
+- the light icon looks good but the dark icon does not
+
+## Theme Fit Rule
+
+Do not assume one design works everywhere.
+
+This project has many moods:
+
+- dark
+- light
+- low-glare
+- neon
+- zine
+- rainy
+- high contrast
+
+When you add a new thing, ask:
+
+- What is this new thing?
+- How do people use it?
+- When should we update it?
+- Where in the repo do we update it?
+- Does it need dark and light versions?
+- Does it need high-contrast versions?
+- Does it need softer versions for eye-comfort themes?
+- Does it need louder versions for neon themes?
+
+The goal is not to make every theme identical.
+
+The goal is to make every theme feel like it belongs.
+
+## Test Terminal Colors
+
+The theme controls terminal colors.
+
+The terminal only shows those colors when a command prints colored text.
+
+This may look plain:
+
+```sh
+echo hello
+```
+
+That is normal.
+
+To test the terminal colors, run:
+
+```sh
+npm run demo:terminal-colors
+```
+
+You should see red, yellow, blue, magenta, cyan, white, and bright versions of those colors.
+
+## Build A Local VSIX
+
+Use this when you want to build the install file yourself.
+
+### Step 1: Install Node.js
+
+If you do not have Node.js yet:
+
+1. Go to <https://nodejs.org/>.
+2. Download the **LTS** version.
+3. Install it.
+4. Close VS Code.
+5. Open VS Code again.
+
+### Step 2: Install Project Tools
+
+Open the VS Code terminal and run:
+
+```sh
+npm install
+```
+
+### Step 3: Make The VSIX File
+
+Run:
+
+```sh
+npm run package
+```
+
+This makes a file that ends with `.vsix`.
+
+Do not run this unless you know why you need it:
+
+```sh
+npm audit fix --force
+```
+
+That command can make big dependency changes.
+
+The final `.vsix` file does not include `node_modules`.
+
+## Install A Local VSIX
+
+After `npm run package`, run:
+
+```sh
+code --install-extension pixels-to-punk-cyber-1.0.3.vsix --force
+```
+
+If the version changes, the file name changes too.
+
+## GitHub Releases
+
+This repo has a GitHub Action that builds the `.vsix` file.
+
+To run it by hand:
+
+1. Open the repo on GitHub.
+2. Click **Actions**.
+3. Click **Build VSIX**.
+4. Click **Run workflow**.
+
+To publish a real GitHub Release, push a version tag:
+
+```sh
+git tag v1.0.3
+git push origin v1.0.3
+```
+
+The action builds the `.vsix` file and attaches it to the GitHub Release for that tag.
+
+## Release Checklist
+
+When you change the extension and want a new release:
+
+1. Open `package.json`.
+2. Change the version number.
+3. Run:
+
+   ```sh
+   npm run package
+   ```
+
+4. Commit the changes.
+5. Tag the commit with the same version.
+6. Push the commit and tag.
+
+Example:
+
+```sh
+git add .
+git commit -m "Release v1.0.3"
+git tag v1.0.3
+git push origin main
+git push origin v1.0.3
+```
+
+## If The `code` Command Does Not Work
+
+If the terminal says `code: command not found`:
+
+1. Open the Command Palette with `Command + Shift + P`.
+2. Type:
+
+   ```text
+   Shell Command
+   ```
+
+3. Click **Shell Command: Install 'code' command in PATH**.
+4. Try the install command again.
+
+## Keep Learning
+
+The easiest way to learn theme-making is to change one color at a time.
+
+Good first colors to try:
+
+- `editor.background`
+- `editor.foreground`
+- `sideBar.background`
+- `statusBar.background`
+- `panel.background`
+- `panelTitle.activeBorder`
+- `problemsErrorIcon.foreground`
+- `debugConsole.infoForeground`
+- `terminal.background`
+- `terminal.foreground`
+- `terminal.ansiCyan`
+- `terminal.ansiMagenta`
+- `keyword`
+- `string`
+- `entity.name.function`

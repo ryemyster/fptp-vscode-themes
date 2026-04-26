@@ -1,0 +1,8 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 2h5l3 3v9H4V2Z" fill="#101019"/>
+  <path d="M9 2v3h3" fill="#FFB15E" opacity=".55"/>
+  <path d="M4 2h5l3 3v9H4V2Z" stroke="#24D9FF" stroke-opacity=".5"/>
+  <path d="M3.5 11.5 12 9.75v3.5L3.5 15v-3.5Z" fill="#FF36B7" opacity=".38"/>
+  <rect x="3" y="6.5" width="10" height="5.75" rx="1.25" fill="#FFB15E"/>
+  <text x="8" y="10.75" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="5" font-weight="800" fill="#241406">Y</text>
+</svg>
