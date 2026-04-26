@@ -30,6 +30,9 @@ jobs:
       - name: Build generated theme variants
         run: node scripts/build-theme-variants.js
 
+      - name: Build generated file icons
+        run: npm run build:file-icons
+
       - name: Package VS Code extension
         run: npm run package
 

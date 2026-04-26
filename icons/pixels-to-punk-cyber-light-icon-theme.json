@@ -14,6 +14,66 @@
     },
     "_root_folder_open_light": {
       "iconPath": "./light/root-folder-open.svg"
+    },
+    "_file_js_light": {
+      "iconPath": "./light/file-js.svg"
+    },
+    "_file_ts_light": {
+      "iconPath": "./light/file-ts.svg"
+    },
+    "_file_react_light": {
+      "iconPath": "./light/file-react.svg"
+    },
+    "_file_html_light": {
+      "iconPath": "./light/file-html.svg"
+    },
+    "_file_css_light": {
+      "iconPath": "./light/file-css.svg"
+    },
+    "_file_json_light": {
+      "iconPath": "./light/file-json.svg"
+    },
+    "_file_md_light": {
+      "iconPath": "./light/file-md.svg"
+    },
+    "_file_shell_light": {
+      "iconPath": "./light/file-shell.svg"
+    },
+    "_file_git_light": {
+      "iconPath": "./light/file-git.svg"
+    },
+    "_file_docker_light": {
+      "iconPath": "./light/file-docker.svg"
+    },
+    "_file_yaml_light": {
+      "iconPath": "./light/file-yaml.svg"
+    },
+    "_file_python_light": {
+      "iconPath": "./light/file-python.svg"
+    },
+    "_file_rust_light": {
+      "iconPath": "./light/file-rust.svg"
+    },
+    "_file_go_light": {
+      "iconPath": "./light/file-go.svg"
+    },
+    "_file_env_light": {
+      "iconPath": "./light/file-env.svg"
+    },
+    "_file_config_light": {
+      "iconPath": "./light/file-config.svg"
+    },
+    "_file_package_light": {
+      "iconPath": "./light/file-package.svg"
+    },
+    "_file_readme_light": {
+      "iconPath": "./light/file-readme.svg"
+    },
+    "_file_license_light": {
+      "iconPath": "./light/file-license.svg"
+    },
+    "_file_github_light": {
+      "iconPath": "./light/file-github.svg"
     }
   },
   "file": "_file_light",
@@ -22,7 +82,102 @@
   "rootFolder": "_root_folder_light",
   "rootFolderExpanded": "_root_folder_open_light",
   "hidesExplorerArrows": false,
-  "languageIds": {},
-  "fileExtensions": {},
-  "fileNames": {}
+  "languageIds": {
+    "javascript": "_file_js_light",
+    "javascriptreact": "_file_react_light",
+    "typescript": "_file_ts_light",
+    "typescriptreact": "_file_react_light",
+    "html": "_file_html_light",
+    "css": "_file_css_light",
+    "scss": "_file_css_light",
+    "less": "_file_css_light",
+    "json": "_file_json_light",
+    "jsonc": "_file_json_light",
+    "markdown": "_file_md_light",
+    "shellscript": "_file_shell_light",
+    "dockerfile": "_file_docker_light",
+    "yaml": "_file_yaml_light",
+    "python": "_file_python_light",
+    "rust": "_file_rust_light",
+    "go": "_file_go_light",
+    "gitignore": "_file_git_light"
+  },
+  "fileExtensions": {
+    "js": "_file_js_light",
+    "cjs": "_file_js_light",
+    "mjs": "_file_js_light",
+    "jsx": "_file_react_light",
+    "ts": "_file_ts_light",
+    "mts": "_file_ts_light",
+    "cts": "_file_ts_light",
+    "tsx": "_file_react_light",
+    "html": "_file_html_light",
+    "htm": "_file_html_light",
+    "css": "_file_css_light",
+    "scss": "_file_css_light",
+    "sass": "_file_css_light",
+    "less": "_file_css_light",
+    "json": "_file_json_light",
+    "jsonc": "_file_json_light",
+    "md": "_file_md_light",
+    "markdown": "_file_md_light",
+    "sh": "_file_shell_light",
+    "bash": "_file_shell_light",
+    "zsh": "_file_shell_light",
+    "fish": "_file_shell_light",
+    "yml": "_file_yaml_light",
+    "yaml": "_file_yaml_light",
+    "py": "_file_python_light",
+    "rs": "_file_rust_light",
+    "go": "_file_go_light",
+    "env": "_file_env_light",
+    "toml": "_file_config_light",
+    "ini": "_file_config_light",
+    "config": "_file_config_light",
+    "lock": "_file_package_light"
+  },
+  "fileNames": {
+    ".env": "_file_env_light",
+    ".env.local": "_file_env_light",
+    ".env.example": "_file_env_light",
+    ".env.development": "_file_env_light",
+    ".env.production": "_file_env_light",
+    ".env.test": "_file_env_light",
+    ".gitignore": "_file_git_light",
+    ".gitattributes": "_file_git_light",
+    ".gitmodules": "_file_git_light",
+    "Dockerfile": "_file_docker_light",
+    "dockerfile": "_file_docker_light",
+    "docker-compose.yml": "_file_docker_light",
+    "docker-compose.yaml": "_file_docker_light",
+    "package.json": "_file_package_light",
+    "package-lock.json": "_file_package_light",
+    "npm-shrinkwrap.json": "_file_package_light",
+    "pnpm-lock.yaml": "_file_package_light",
+    "yarn.lock": "_file_package_light",
+    "bun.lockb": "_file_package_light",
+    "README": "_file_readme_light",
+    "README.md": "_file_readme_light",
+    "readme.md": "_file_readme_light",
+    "LICENSE": "_file_license_light",
+    "LICENSE.md": "_file_license_light",
+    "LICENSE.txt": "_file_license_light",
+    "license": "_file_license_light",
+    "license.md": "_file_license_light",
+    "license.txt": "_file_license_light",
+    "tsconfig.json": "_file_ts_light",
+    "jsconfig.json": "_file_js_light",
+    "vite.config.js": "_file_config_light",
+    "vite.config.ts": "_file_config_light",
+    "vitest.config.js": "_file_config_light",
+    "vitest.config.ts": "_file_config_light",
+    "eslint.config.js": "_file_config_light",
+    "eslint.config.mjs": "_file_config_light",
+    "prettier.config.js": "_file_config_light",
+    ".prettierrc": "_file_config_light",
+    ".eslintrc": "_file_config_light",
+    ".github": "_file_github_light",
+    "dependabot.yml": "_file_github_light",
+    "dependabot.yaml": "_file_github_light"
+  }
 }
