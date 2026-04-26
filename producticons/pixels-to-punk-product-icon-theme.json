@@ -1,0 +1,95 @@
+{
+  "fonts": [
+    {
+      "id": "pixels-to-punk-product-icons",
+      "src": [
+        {
+          "path": "./pixels-to-punk-product-icons.ttf",
+          "format": "truetype"
+        }
+      ],
+      "weight": "normal",
+      "style": "normal"
+    }
+  ],
+  "iconDefinitions": {
+    "accounts-view-bar-icon": {
+      "fontCharacter": "\\EB99"
+    },
+    "debug-console-view-icon": {
+      "fontCharacter": "\\EB9B"
+    },
+    "debug-view-icon": {
+      "fontCharacter": "\\EAAF"
+    },
+    "dialog-close": {
+      "fontCharacter": "\\EA76"
+    },
+    "extensions-view-icon": {
+      "fontCharacter": "\\EAE6"
+    },
+    "explorer-view-icon": {
+      "fontCharacter": "\\EAF0"
+    },
+    "menu-selection": {
+      "fontCharacter": "\\EAB2"
+    },
+    "notifications-clear": {
+      "fontCharacter": "\\EABF"
+    },
+    "notifications-hide": {
+      "fontCharacter": "\\EA76"
+    },
+    "notifications-view-icon": {
+      "fontCharacter": "\\EAA2"
+    },
+    "output-view-icon": {
+      "fontCharacter": "\\EB9D"
+    },
+    "panel-close": {
+      "fontCharacter": "\\EA76"
+    },
+    "panel-maximize": {
+      "fontCharacter": "\\EB56"
+    },
+    "panel-restore": {
+      "fontCharacter": "\\EB57"
+    },
+    "refresh": {
+      "fontCharacter": "\\EB37"
+    },
+    "remote-explorer-view-icon": {
+      "fontCharacter": "\\EB3A"
+    },
+    "run-view-icon": {
+      "fontCharacter": "\\EB44"
+    },
+    "scm-view-icon": {
+      "fontCharacter": "\\EC6F"
+    },
+    "search-view-icon": {
+      "fontCharacter": "\\EC10"
+    },
+    "settings-gear": {
+      "fontCharacter": "\\EB51"
+    },
+    "split-horizontal": {
+      "fontCharacter": "\\EB56"
+    },
+    "split-vertical": {
+      "fontCharacter": "\\EB57"
+    },
+    "terminal-view-icon": {
+      "fontCharacter": "\\EA85"
+    },
+    "testing-view-icon": {
+      "fontCharacter": "\\EA79"
+    },
+    "warning": {
+      "fontCharacter": "\\EA6C"
+    },
+    "error": {
+      "fontCharacter": "\\EA87"
+    }
+  }
+}

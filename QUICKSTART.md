@@ -53,6 +53,26 @@ So if you pick a light color theme, you may want to pick the light icon theme yo
 
 Now your folders and files should have Pixels to Punk icons.
 
+## Pick The Product Icons
+
+Product icons are the tiny buttons inside VS Code.
+
+They are things like Search, Source Control, Run, Terminal, Settings, close, refresh, warning, and error icons.
+
+The extension tries to start with **Pixels to Punk Product Icons**.
+
+If you need to pick it by hand:
+
+1. Press `Command + Shift + P`.
+2. Type:
+
+   ```text
+   Product Icon Theme
+   ```
+
+3. Click **Preferences: Product Icon Theme**.
+4. Pick **Pixels to Punk Product Icons**.
+
 ## Optional: Pick A Matching Pair
 
 A matching pair changes the color theme and icon theme together.
