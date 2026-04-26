@@ -2,7 +2,7 @@
   "name": "pixels-to-punk-cyber",
   "displayName": "Pixels to Punk Cyber",
   "description": "Neon punk VS Code themes inspired by the From Pixels to Punk brand, with anime-pop color, punk energy, and coding comfort.",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "publisher": "local",
   "license": "MIT",
   "main": "./src/extension.js",
@@ -385,6 +385,7 @@
   "scripts": {
     "clean": "rm -rf node_modules pixels-to-punk-cyber-*.vsix",
     "build:file-icons": "node scripts/build-file-icons.js",
+    "build:git-decorations": "node scripts/build-git-decorations.js",
     "build:status-bar-states": "node scripts/build-status-bar-states.js",
     "demo:terminal-colors": "node scripts/terminal-colors.js",
     "package": "npx --no-install vsce package --allow-missing-repository",

@@ -36,6 +36,9 @@ jobs:
       - name: Build generated status bar states
         run: npm run build:status-bar-states
 
+      - name: Build generated Git decorations
+        run: npm run build:git-decorations
+
       - name: Package VS Code extension
         run: npm run package
 

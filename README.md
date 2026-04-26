@@ -32,6 +32,7 @@ You get:
 - optional time-of-day theme switching
 - commands that pair matching colors and icons
 - clearer status bar states
+- polished Git decoration colors
 - terminal colors
 - Git, Problems, Debug Console, and Output panel colors
 
