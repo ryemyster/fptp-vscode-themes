@@ -155,7 +155,14 @@
     "statusBarItem.errorBackground": "#FF5C7A",
     "statusBarItem.errorForeground": "#FFFFFF",
     "statusBarItem.warningBackground": "#FFE45C",
-    "statusBarItem.warningForeground": "#101019"
+    "statusBarItem.warningForeground": "#101019",
+    "gitDecoration.renamedResourceForeground": "#00F0FF",
+    "gitDecoration.untrackedResourceForeground": "#70F7FF",
+    "gitDecoration.ignoredResourceForeground": "#7A86B3",
+    "gitDecoration.conflictingResourceForeground": "#FF4FD8",
+    "gitDecoration.submoduleResourceForeground": "#6EA8FF",
+    "gitDecoration.stageModifiedResourceForeground": "#FFE45C",
+    "gitDecoration.stageDeletedResourceForeground": "#FF5C7A"
   },
   "tokenColors": [
     {

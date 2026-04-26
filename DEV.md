@@ -36,6 +36,7 @@ VS Code reads the JSON and SVG files in this repo.
 | `src/extension.js` | Adds command palette commands, including theme pairs, workspace mood presets, and time-of-day switching. |
 | `scripts/build-theme-variants.js` | Builds theme variants from palettes. |
 | `scripts/build-file-icons.js` | Builds file icons and icon maps. |
+| `scripts/build-git-decorations.js` | Builds Git added, modified, deleted, renamed, ignored, conflict, and submodule colors. |
 | `scripts/build-status-bar-states.js` | Builds status bar warning, error, remote, debug, and hover colors. |
 | `scripts/terminal-colors.js` | Prints terminal colors for testing. |
 | `README.md` | Home page for the repo. |
@@ -611,6 +612,64 @@ Update status bar states when:
 The builder picks colors from each theme's own palette.
 
 That keeps neon themes loud, soft themes calmer, and high-contrast themes readable.
+
+## Git Decoration Colors
+
+Git decorations are the colored labels VS Code shows for changed files.
+
+They help people see what happened in a project.
+
+### What It Changes
+
+The Git decoration builder updates:
+
+- `gitDecoration.addedResourceForeground`
+- `gitDecoration.modifiedResourceForeground`
+- `gitDecoration.deletedResourceForeground`
+- `gitDecoration.renamedResourceForeground`
+- `gitDecoration.untrackedResourceForeground`
+- `gitDecoration.ignoredResourceForeground`
+- `gitDecoration.conflictingResourceForeground`
+- `gitDecoration.submoduleResourceForeground`
+- `gitDecoration.stageModifiedResourceForeground`
+- `gitDecoration.stageDeletedResourceForeground`
+
+### Color Meanings
+
+- Added and untracked use green.
+- Modified and staged modified use yellow.
+- Deleted and staged deleted use red.
+- Renamed uses cyan.
+- Ignored uses a quiet muted color.
+- Conflicts use magenta.
+- Submodules use blue or cyan.
+
+### Where To Update It
+
+The builder lives here:
+
+```text
+scripts/build-git-decorations.js
+```
+
+Run it with:
+
+```sh
+npm run build:git-decorations
+```
+
+The release workflows run it before packaging.
+
+### When To Update It
+
+Update Git decorations when:
+
+- added files are hard to see
+- modified files look too much like warnings
+- deleted files do not feel serious enough
+- ignored files are too loud
+- conflicts are not obvious
+- a light theme or dark theme needs better contrast
 
 ## Test Terminal Colors
 
