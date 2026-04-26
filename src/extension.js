@@ -13,6 +13,9 @@ const PRESET_SETTINGS = [
   "terminal.integrated.tabs.enabled"
 ];
 
+const TIME_OF_DAY_NAMESPACE = "pixelsToPunk.timeOfDay";
+const TIME_OF_DAY_CHECK_INTERVAL_MS = 15 * 60 * 1000;
+
 const presets = [
   {
     id: "deepWork",
@@ -106,6 +109,27 @@ const presets = [
   }
 ];
 
+const timeOfDayParts = [
+  {
+    id: "day",
+    label: "Day",
+    themeSetting: "dayTheme",
+    iconThemeSetting: "dayIconTheme"
+  },
+  {
+    id: "evening",
+    label: "Evening",
+    themeSetting: "eveningTheme",
+    iconThemeSetting: "eveningIconTheme"
+  },
+  {
+    id: "night",
+    label: "Night",
+    themeSetting: "nightTheme",
+    iconThemeSetting: "nightIconTheme"
+  }
+];
+
 async function updateSetting(key, value) {
   await vscode.workspace
     .getConfiguration()
@@ -118,8 +142,102 @@ function hasWorkspace() {
 
 function showOpenWorkspaceMessage() {
   vscode.window.showWarningMessage(
-    "Open a folder or workspace first. Pixels to Punk mood presets only change workspace settings."
+    "Open a folder or workspace first. Pixels to Punk commands only change workspace settings."
   );
+}
+
+function getTimeOfDayConfig() {
+  return vscode.workspace.getConfiguration(TIME_OF_DAY_NAMESPACE);
+}
+
+function getHour(config, key) {
+  const value = config.get(key);
+  if (typeof value !== "number" || Number.isNaN(value)) {
+    return 0;
+  }
+
+  return Math.max(0, Math.min(23, Math.floor(value)));
+}
+
+function getCurrentTimeOfDayPart(date = new Date()) {
+  const config = getTimeOfDayConfig();
+  const hour = date.getHours();
+  const dayStartHour = getHour(config, "dayStartHour");
+  const eveningStartHour = getHour(config, "eveningStartHour");
+  const nightStartHour = getHour(config, "nightStartHour");
+
+  if (hour >= nightStartHour || hour < dayStartHour) {
+    return timeOfDayParts.find((part) => part.id === "night");
+  }
+
+  if (hour >= eveningStartHour) {
+    return timeOfDayParts.find((part) => part.id === "evening");
+  }
+
+  return timeOfDayParts.find((part) => part.id === "day");
+}
+
+function getTimeOfDayTheme(part) {
+  const config = getTimeOfDayConfig();
+
+  return {
+    colorTheme: config.get(part.themeSetting),
+    iconTheme: config.get(part.iconThemeSetting)
+  };
+}
+
+async function applyTimeOfDayTheme(showMessage = true) {
+  if (!hasWorkspace()) {
+    showOpenWorkspaceMessage();
+    return;
+  }
+
+  const part = getCurrentTimeOfDayPart();
+  const { colorTheme, iconTheme } = getTimeOfDayTheme(part);
+
+  await updateSetting("workbench.colorTheme", colorTheme);
+  await updateSetting("workbench.iconTheme", iconTheme);
+
+  if (showMessage) {
+    vscode.window.showInformationMessage(
+      `Pixels to Punk ${part.label} theme applied to workspace settings.`
+    );
+  }
+}
+
+async function enableTimeOfDaySwitching() {
+  if (!hasWorkspace()) {
+    showOpenWorkspaceMessage();
+    return;
+  }
+
+  await updateSetting(`${TIME_OF_DAY_NAMESPACE}.enabled`, true);
+  await applyTimeOfDayTheme(false);
+  vscode.window.showInformationMessage(
+    "Pixels to Punk time-of-day switching enabled for this workspace."
+  );
+}
+
+async function disableTimeOfDaySwitching() {
+  if (!hasWorkspace()) {
+    showOpenWorkspaceMessage();
+    return;
+  }
+
+  await updateSetting(`${TIME_OF_DAY_NAMESPACE}.enabled`, false);
+  vscode.window.showInformationMessage(
+    "Pixels to Punk time-of-day switching disabled for this workspace."
+  );
+}
+
+function isTimeOfDaySwitchingEnabled() {
+  return Boolean(getTimeOfDayConfig().get("enabled"));
+}
+
+function maybeApplyAutomaticTimeOfDayTheme() {
+  if (hasWorkspace() && isTimeOfDaySwitchingEnabled()) {
+    applyTimeOfDayTheme(false);
+  }
 }
 
 async function applyPreset(preset) {
@@ -173,7 +291,24 @@ async function pickMoodPreset() {
 function activate(context) {
   context.subscriptions.push(
     vscode.commands.registerCommand("pixelsToPunk.pickMoodPreset", pickMoodPreset),
-    vscode.commands.registerCommand("pixelsToPunk.resetMoodPreset", resetPreset)
+    vscode.commands.registerCommand("pixelsToPunk.resetMoodPreset", resetPreset),
+    vscode.commands.registerCommand(
+      "pixelsToPunk.applyCurrentTimeOfDayTheme",
+      () => applyTimeOfDayTheme(true)
+    ),
+    vscode.commands.registerCommand(
+      "pixelsToPunk.enableTimeOfDaySwitching",
+      enableTimeOfDaySwitching
+    ),
+    vscode.commands.registerCommand(
+      "pixelsToPunk.disableTimeOfDaySwitching",
+      disableTimeOfDaySwitching
+    ),
+    vscode.workspace.onDidChangeConfiguration((event) => {
+      if (event.affectsConfiguration(TIME_OF_DAY_NAMESPACE)) {
+        maybeApplyAutomaticTimeOfDayTheme();
+      }
+    })
   );
 
   for (const preset of presets) {
@@ -181,6 +316,14 @@ function activate(context) {
       vscode.commands.registerCommand(preset.command, () => applyPreset(preset))
     );
   }
+
+  maybeApplyAutomaticTimeOfDayTheme();
+
+  const timer = setInterval(
+    maybeApplyAutomaticTimeOfDayTheme,
+    TIME_OF_DAY_CHECK_INTERVAL_MS
+  );
+  context.subscriptions.push({ dispose: () => clearInterval(timer) });
 }
 
 function deactivate() {}
