@@ -358,57 +358,79 @@ The final `.vsix` file does not include `node_modules`.
 After `npm run package`, run:
 
 ```sh
-code --install-extension pixels-to-punk-cyber-1.0.3.vsix --force
+npm run install:vsix
 ```
 
-If the version changes, the file name changes too.
+That command reads the version from `package.json`, then installs the matching `.vsix` file.
 
 ## GitHub Releases
 
-This repo has a GitHub Action that builds the `.vsix` file.
+This repo has two GitHub Actions for releases.
+
+### Easy Release
+
+Use **Version and Release VSIX** when you want GitHub to do the release work.
 
 To run it by hand:
 
 1. Open the repo on GitHub.
 2. Click **Actions**.
-3. Click **Build VSIX**.
+3. Click **Version and Release VSIX**.
 4. Click **Run workflow**.
+5. Type the new version number.
+6. Click **Run workflow**.
 
-To publish a real GitHub Release, push a version tag:
+Example version:
 
-```sh
-git tag v1.0.3
-git push origin v1.0.3
+```text
+1.0.5
 ```
 
-The action builds the `.vsix` file and attaches it to the GitHub Release for that tag.
+That workflow:
+
+1. updates `package.json`
+2. updates `package-lock.json`
+3. rebuilds generated theme variants
+4. rebuilds generated file icons
+5. builds the `.vsix` file
+6. commits the version bump to `main`
+7. creates the `v` tag
+8. publishes the GitHub Release
+
+### Build Only
+
+Use **Build VSIX** when you only want to build the `.vsix` file.
+
+That workflow runs on version tags and can also be run by hand.
 
 The workflow rebuilds generated theme variants and generated file icons before packaging.
 
 ## Release Checklist
 
-When you change the extension and want a new release:
+Use this checklist if you release by hand instead of using **Version and Release VSIX**.
 
 1. Open `package.json`.
 2. Change the version number.
-3. Run:
+3. Open `package-lock.json`.
+4. Change the root version numbers to match.
+5. Run:
 
    ```sh
    npm run package
    ```
 
-4. Commit the changes.
-5. Tag the commit with the same version.
-6. Push the commit and tag.
+6. Commit the changes.
+7. Tag the commit with the same version.
+8. Push the commit and tag.
 
 Example:
 
 ```sh
 git add .
-git commit -m "Release v1.0.3"
-git tag v1.0.3
+git commit -m "Release v1.0.5"
+git tag v1.0.5
 git push origin main
-git push origin v1.0.3
+git push origin v1.0.5
 ```
 
 ## If The `code` Command Does Not Work

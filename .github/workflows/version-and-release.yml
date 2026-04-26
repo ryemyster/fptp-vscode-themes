@@ -1,0 +1,100 @@
+name: Version and Release VSIX
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, like 1.0.5"
+        required: true
+        type: string
+      prerelease:
+        description: "Mark the GitHub Release as a prerelease"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  version-and-release:
+    name: Update version, tag, and publish VSIX
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate version input
+        run: |
+          VERSION="${{ inputs.version }}"
+          if ! printf '%s' "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$'; then
+            echo "Version must look like 1.0.5 or 1.0.5-beta.1"
+            exit 1
+          fi
+          if git rev-parse "v$VERSION" >/dev/null 2>&1; then
+            echo "Tag v$VERSION already exists"
+            exit 1
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update package version
+        run: |
+          CURRENT_VERSION="$(node -p "require('./package.json').version")"
+          if [ "$CURRENT_VERSION" = "${{ inputs.version }}" ]; then
+            echo "package.json is already at $CURRENT_VERSION"
+          else
+            npm version "${{ inputs.version }}" --no-git-tag-version
+          fi
+
+      - name: Build generated theme variants
+        run: node scripts/build-theme-variants.js
+
+      - name: Build generated file icons
+        run: npm run build:file-icons
+
+      - name: Package VS Code extension
+        run: npm run package
+
+      - name: Commit version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json themes icons
+          if git diff --cached --quiet; then
+            echo "No version or generated file changes to commit"
+          else
+            git commit -m "Release v${{ inputs.version }}"
+          fi
+
+      - name: Tag release
+        run: git tag "v${{ inputs.version }}"
+
+      - name: Push commit and tag
+        run: |
+          git push origin HEAD:main
+          git push origin "v${{ inputs.version }}"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          FLAGS=()
+          if [ "${{ inputs.prerelease }}" = "true" ]; then
+            FLAGS+=(--prerelease)
+          fi
+
+          gh release create "v${{ inputs.version }}" pixels-to-punk-cyber-${{ inputs.version }}.vsix \
+            --title "v${{ inputs.version }}" \
+            --notes "Download the VSIX file below, then install it in VS Code with Extensions: Install from VSIX." \
+            "${FLAGS[@]}"
