@@ -32,6 +32,7 @@ You get:
 - optional time-of-day theme switching
 - commands that pair matching colors and icons
 - clearer status bar states
+- polished Git decoration colors
 - terminal colors
 - Git, Problems, Debug Console, and Output panel colors
 
@@ -73,6 +74,19 @@ It does not change your code.
 It does not run your app.
 
 It just makes VS Code feel more like Pixels to Punk.
+
+## Workspace Mood Presets
+
+Run `Pixels to Punk: Pick Workspace Mood Preset` from the Command Palette, then pick a mood.
+
+| Preset | Color Theme | Icon Theme | Short Version |
+| --- | --- | --- | --- |
+| Deep Work | Pixels to Punk Cyber Dark for Those with Glasses | Pixels to Punk Cyber Icons | Quiet dark colors with fewer distractions. |
+| Terminal Night | Pixels to Punk CRT After Midnight | Pixels to Punk Cyber Icons | CRT colors for terminal-heavy work. |
+| Zine Shop | Pixels to Punk Zine Shop Window | Pixels to Punk Cyber Icons Light | Warm light colors for docs and notes. |
+| Maximum Neon | Pixels to Punk Riot Glow Dark | Pixels to Punk Cyber Icons | The loudest neon setup. |
+| Low Glare | Pixels to Punk Soft Focus Night | Pixels to Punk Cyber Icons | Softer dark colors for tired eyes. |
+| Low Glare Light | Pixels to Punk Soft Focus Day | Pixels to Punk Cyber Icons Light | Softer light colors for tired eyes. |
 
 ## Theme List
 

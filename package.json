@@ -29,6 +29,7 @@
     "onCommand:pixelsToPunk.applyZineShopPreset",
     "onCommand:pixelsToPunk.applyMaximumNeonPreset",
     "onCommand:pixelsToPunk.applyLowGlarePreset",
+    "onCommand:pixelsToPunk.applyLowGlareLightPreset",
     "onCommand:pixelsToPunk.resetMoodPreset",
     "onCommand:pixelsToPunk.applyCurrentTimeOfDayTheme",
     "onCommand:pixelsToPunk.enableTimeOfDaySwitching",
@@ -74,6 +75,11 @@
       {
         "command": "pixelsToPunk.applyLowGlarePreset",
         "title": "Pixels to Punk: Apply Low Glare Preset",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.applyLowGlareLightPreset",
+        "title": "Pixels to Punk: Apply Low Glare Light Preset",
         "category": "Pixels to Punk"
       },
       {
@@ -407,6 +413,7 @@
   "scripts": {
     "clean": "rm -rf node_modules pixels-to-punk-cyber-*.vsix",
     "build:file-icons": "node scripts/build-file-icons.js",
+    "build:git-decorations": "node scripts/build-git-decorations.js",
     "build:status-bar-states": "node scripts/build-status-bar-states.js",
     "demo:terminal-colors": "node scripts/terminal-colors.js",
     "package": "npx --no-install vsce package --allow-missing-repository",

@@ -131,6 +131,7 @@ The moods are:
 - **Zine Shop**: warm light colors for docs and notes
 - **Maximum Neon**: the loudest neon setup
 - **Low Glare**: softer colors for tired eyes
+- **Low Glare Light**: softer light colors for tired eyes
 
 To undo a mood preset:
 
