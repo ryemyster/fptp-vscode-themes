@@ -300,6 +300,7 @@ Each preset can change:
 | Zine Shop | Pixels to Punk Zine Shop Window | Pixels to Punk Cyber Icons Light | Warm light setup for docs and notes. |
 | Maximum Neon | Pixels to Punk Riot Glow Dark | Pixels to Punk Cyber Icons | Loud neon setup. |
 | Low Glare | Pixels to Punk Soft Focus Night | Pixels to Punk Cyber Icons | Softer setup for tired eyes. |
+| Low Glare Light | Pixels to Punk Soft Focus Day | Pixels to Punk Cyber Icons Light | Softer light setup for tired eyes. |
 
 ### How People Use Them
 
@@ -320,6 +321,7 @@ They can also run a preset directly:
 - `Pixels to Punk: Apply Zine Shop Preset`
 - `Pixels to Punk: Apply Maximum Neon Preset`
 - `Pixels to Punk: Apply Low Glare Preset`
+- `Pixels to Punk: Apply Low Glare Light Preset`
 
 ### How People Undo Them
 
