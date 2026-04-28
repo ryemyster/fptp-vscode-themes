@@ -106,6 +106,24 @@ const presets = [
       "editor.wordWrap": "bounded",
       "terminal.integrated.tabs.enabled": false
     }
+  },
+  {
+    id: "lowGlareLight",
+    label: "Low Glare Light",
+    description: "Soft light colors for tired eyes and daylight sessions.",
+    command: "pixelsToPunk.applyLowGlareLightPreset",
+    settings: {
+      "workbench.colorTheme": "Pixels to Punk Soft Focus Day",
+      "workbench.iconTheme": "pixels-to-punk-cyber-icons-light",
+      "editor.minimap.enabled": false,
+      "editor.stickyScroll.enabled": true,
+      "editor.guides.bracketPairs": "active",
+      "editor.bracketPairColorization.enabled": true,
+      "editor.renderWhitespace": "none",
+      "editor.cursorBlinking": "smooth",
+      "editor.wordWrap": "bounded",
+      "terminal.integrated.tabs.enabled": false
+    }
   }
 ];
 
