@@ -2,7 +2,7 @@
   "name": "pixels-to-punk-cyber",
   "displayName": "Pixels to Punk Cyber",
   "description": "Neon punk VS Code themes inspired by the From Pixels to Punk brand, with anime-pop color, punk energy, and coding comfort.",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "publisher": "local",
   "license": "MIT",
   "main": "./src/extension.js",
@@ -41,6 +41,8 @@
     "onCommand:pixelsToPunk.activateSoftFocusNightPair",
     "onCommand:pixelsToPunk.activateHighContrastDarkPair",
     "onCommand:pixelsToPunk.activateHighContrastLightPair",
+    "onCommand:pixelsToPunk.activateOriginalGlassesDarkPair",
+    "onCommand:pixelsToPunk.activateOriginalGlassesLightPair",
     "onCommand:pixelsToPunk.activateMatchingIconTheme"
   ],
   "contributes": {
@@ -133,6 +135,16 @@
       {
         "command": "pixelsToPunk.activateHighContrastLightPair",
         "title": "Pixels to Punk: Activate High Contrast Light Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateOriginalGlassesDarkPair",
+        "title": "Pixels to Punk: Activate Original Glasses Dark Pair",
+        "category": "Pixels to Punk"
+      },
+      {
+        "command": "pixelsToPunk.activateOriginalGlassesLightPair",
+        "title": "Pixels to Punk: Activate Original Glasses Light Pair",
         "category": "Pixels to Punk"
       },
       {
@@ -375,6 +387,16 @@
         "label": "Pixels to Punk Original",
         "uiTheme": "vs-dark",
         "path": "./themes/pixels-to-punk-original-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Original Dark for Those with Glasses",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-original-dark-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Original Light for Those with Glasses",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-original-light-for-those-with-glasses-color-theme.json"
       },
       {
         "label": "Pixels to Punk Original High Contrast",

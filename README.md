@@ -20,7 +20,7 @@ If you want to change the themes, build the install file, or help make the proje
 
 You get:
 
-- 30 color themes
+- 32 color themes
 - 2 icon themes
 - 1 product icon theme
 - dark themes
@@ -120,6 +120,8 @@ Run `Pixels to Punk: Pick Workspace Mood Preset` from the Command Palette, then 
 | Pixels to Punk Toxic Valentine | Dark | Hot pink and midnight violet. |
 | Pixels to Punk Arcade Raincoat | Dark | Rainy navy with yellow street glow. |
 | Pixels to Punk Original | Dark | Closest to the source art palette. |
+| Pixels to Punk Original Dark for Those with Glasses | Dark | Original dark colors with lower glare and clearer contrast. |
+| Pixels to Punk Original Light for Those with Glasses | Light | Original color energy on a readable warm light canvas. |
 | Pixels to Punk Original High Contrast | High Contrast Dark | Stronger dark readability. |
 | Pixels to Punk Electric Sticker Sheet High Contrast | High Contrast Light | Stronger light readability. |
 
