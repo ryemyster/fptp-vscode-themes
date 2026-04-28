@@ -178,6 +178,22 @@ const themePairs = [
     command: "pixelsToPunk.activateHighContrastLightPair",
     colorTheme: "Pixels to Punk Electric Sticker Sheet High Contrast",
     iconTheme: "pixels-to-punk-cyber-icons-light"
+  },
+  {
+    id: "originalGlassesDark",
+    label: "Original Glasses Dark",
+    description: "Original palette with softer dark readability and dark icons.",
+    command: "pixelsToPunk.activateOriginalGlassesDarkPair",
+    colorTheme: "Pixels to Punk Original Dark for Those with Glasses",
+    iconTheme: "pixels-to-punk-cyber-icons"
+  },
+  {
+    id: "originalGlassesLight",
+    label: "Original Glasses Light",
+    description: "Original palette with softer light readability and light icons.",
+    command: "pixelsToPunk.activateOriginalGlassesLightPair",
+    colorTheme: "Pixels to Punk Original Light for Those with Glasses",
+    iconTheme: "pixels-to-punk-cyber-icons-light"
   }
 ];
 
