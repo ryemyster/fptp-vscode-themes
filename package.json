@@ -2,7 +2,7 @@
   "name": "pixels-to-punk-cyber",
   "displayName": "Pixels to Punk Cyber",
   "description": "Neon punk VS Code themes inspired by the From Pixels to Punk brand, with anime-pop color, punk energy, and coding comfort.",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "publisher": "local",
   "license": "MIT",
   "main": "./src/extension.js",
@@ -267,6 +267,96 @@
         "label": "Pixels to Punk Cyber Light for Those with Glasses",
         "uiTheme": "vs",
         "path": "./themes/pixels-to-punk-cyber-light-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Shibuya Sticker Day",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-shibuya-sticker-day-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Harajuku Product Pop",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-harajuku-product-pop-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Anime Whiteboard",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-anime-whiteboard-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Sakura Sprint",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-sakura-sprint-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk City Pop Clarity",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-city-pop-clarity-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Shinjuku Neon Review",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-shinjuku-neon-review-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Akihabara Game Dev Midnight",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-akihabara-game-dev-midnight-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Midnight Matsuri",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-midnight-matsuri-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Tokyo Fog Cutter",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-tokyo-fog-cutter-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk HAGANE Night Shift",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-hagane-night-shift-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Kyoto Paper Lantern for Those with Glasses",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-kyoto-paper-lantern-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Matcha Notebook for Those with Glasses",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-matcha-notebook-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Sakura Overcast for Those with Glasses",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-sakura-overcast-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Washi Desk for Those with Glasses",
+        "uiTheme": "vs",
+        "path": "./themes/pixels-to-punk-washi-desk-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Kyoto Night Train for Those with Glasses",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-kyoto-night-train-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Indigo Alley for Those with Glasses",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-indigo-alley-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Moonlit Tatami for Those with Glasses",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-moonlit-tatami-for-those-with-glasses-color-theme.json"
+      },
+      {
+        "label": "Pixels to Punk Onsen Twilight for Those with Glasses",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pixels-to-punk-onsen-twilight-for-those-with-glasses-color-theme.json"
       },
       {
         "label": "Pixels to Punk Neon Backstage",

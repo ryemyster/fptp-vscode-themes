@@ -20,7 +20,7 @@ If you want to change the themes, build the install file, or help make the proje
 
 You get:
 
-- 32 color themes
+- 50 color themes
 - 2 icon themes
 - 1 product icon theme
 - dark themes
@@ -96,6 +96,24 @@ Run `Pixels to Punk: Pick Workspace Mood Preset` from the Command Palette, then 
 | Pixels to Punk Cyber Light | Light | The main light look with warm paper and bright accents. |
 | Pixels to Punk Cyber Dark for Those with Glasses | Dark | Softer dark colors for long sessions. |
 | Pixels to Punk Cyber Light for Those with Glasses | Light | Softer light colors for bright rooms. |
+| Pixels to Punk Shibuya Sticker Day | Light | White sticker-paper brightness with Shibuya pop energy. |
+| Pixels to Punk Harajuku Product Pop | Light | Warm product-day colors with fashion-district punch. |
+| Pixels to Punk Anime Whiteboard | Light | Clean planning-board light with anime accent colors. |
+| Pixels to Punk Sakura Sprint | Light | Fresh sprint-planning greens, pinks, and soft daylight. |
+| Pixels to Punk City Pop Clarity | Light | Cool city-pop focus colors for readable daytime work. |
+| Pixels to Punk Shinjuku Neon Review | Dark | Night-review neon with readable cyberpunk contrast. |
+| Pixels to Punk Akihabara Game Dev Midnight | Dark | Arcade-blue game-dev night colors. |
+| Pixels to Punk Midnight Matsuri | Dark | Festival-night violet with bright code accents. |
+| Pixels to Punk Tokyo Fog Cutter | Dark | Clear dark grays and teal for cutting through complexity. |
+| Pixels to Punk HAGANE Night Shift | Dark | Metal-band midnight colors with cyan and pink sparks. |
+| Pixels to Punk Kyoto Paper Lantern for Those with Glasses | Light | Warm low-glare paper light for long reading sessions. |
+| Pixels to Punk Matcha Notebook for Those with Glasses | Light | Soft matcha notebook colors with readable code contrast. |
+| Pixels to Punk Sakura Overcast for Those with Glasses | Light | Muted sakura daylight without bright white glare. |
+| Pixels to Punk Washi Desk for Those with Glasses | Light | Neutral washi-paper desk colors for calm focus. |
+| Pixels to Punk Kyoto Night Train for Those with Glasses | Dark | Softer midnight rail colors with gentle cyan and pink. |
+| Pixels to Punk Indigo Alley for Those with Glasses | Dark | Quiet indigo night colors with softened neon accents. |
+| Pixels to Punk Moonlit Tatami for Those with Glasses | Dark | Warm charcoal and tatami greens for low-glare coding. |
+| Pixels to Punk Onsen Twilight for Those with Glasses | Dark | Steam-soft twilight colors with comfortable contrast. |
 | Pixels to Punk Neon Backstage | Dark | Loud concert-night neon. |
 | Pixels to Punk Basement Flyer | Dark | Gritty punk poster colors. |
 | Pixels to Punk CRT After Midnight | Dark | Retro screen glow. |
@@ -143,6 +161,8 @@ These themes try to:
 - keep code readable
 - keep comments and line numbers visible
 - avoid using only color to show meaning
+
+The glasses-friendly themes use WCAG contrast guidance as a baseline: normal text should meet at least 4.5:1 contrast, and meaningful UI boundaries or states should meet at least 3:1 contrast. They also avoid pure black-on-white where possible because that can feel too harsh for some low-vision readers.
 
 They are not medical treatment. They are just careful color choices for people who notice eye strain.
 
