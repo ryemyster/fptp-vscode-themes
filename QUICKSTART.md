@@ -73,6 +73,83 @@ If you need to pick it by hand:
 3. Click **Preferences: Product Icon Theme**.
 4. Pick **Pixels to Punk Product Icons**.
 
+## Optional: Install The Mac Terminal Themes
+
+The repo includes two macOS Terminal themes:
+
+- **Pixels to Punk Cyber Dark**
+- **Pixels to Punk Cyber Light**
+
+Each theme has two parts:
+
+- a `.terminal` profile for the Terminal app window, font, and ANSI colors
+- a `.zsh` shell accent file for colored `ls`, listing aliases, grep highlights, and a matching prompt
+
+You need both parts for the full experience.
+
+To install the Terminal profile:
+
+1. Open the `mac-terminal-themes/` folder.
+2. Double-click `Pixels to Punk Cyber Dark.terminal` or `Pixels to Punk Cyber Light.terminal`.
+3. macOS Terminal opens and imports the profile.
+4. In Terminal, open **Terminal > Settings...**.
+5. Click **Profiles**.
+6. Pick the imported Pixels to Punk profile.
+7. Click **Default** if you want new Terminal windows to use it.
+
+To install the shell accents, open the `mac-terminal-themes/` folder in Terminal and run one helper command.
+
+For Cyber Dark:
+
+```sh
+./install-shell-accent.zsh dark
+```
+
+For Cyber Light:
+
+```sh
+./install-shell-accent.zsh light
+```
+
+To remove the shell accents later:
+
+```sh
+./install-shell-accent.zsh remove
+```
+
+You can also add one of these lines to `~/.zshrc` by hand.
+
+For Cyber Dark:
+
+```sh
+source /path/to/vscode-themes-vibecoded/mac-terminal-themes/pixels-to-punk-cyber-dark.zsh
+```
+
+For Cyber Light:
+
+```sh
+source /path/to/vscode-themes-vibecoded/mac-terminal-themes/pixels-to-punk-cyber-light.zsh
+```
+
+Use the real path to this repo on your machine.
+
+Open a new Terminal window after changing `~/.zshrc`.
+
+After the shell accent file is loaded, commands like `ls -ltra` use Pixels to Punk colors.
+
+The Terminal profile only defines the palette. The shell accent is what makes command output ask for those colors.
+
+The important macOS `ls` settings look like this:
+
+```sh
+export CLICOLOR=1
+export LSCOLORS="GxFxDxFxCxExExBxFxGxDx"
+alias ls="ls -G"
+alias ltra="ls -ltraG"
+```
+
+The dark and light shell accent files each set their own `LSCOLORS` value. Directories use cyan, symlinks and pipes use magenta/purple, executables use green, and a few special writable or system-ish item types use yellow, blue, or red.
+
 ## Optional: Pick A Matching Pair
 
 A matching pair changes the color theme and icon theme together.

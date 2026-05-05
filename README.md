@@ -34,6 +34,7 @@ You get:
 - clearer status bar states
 - polished Git decoration colors
 - terminal colors
+- 2 macOS Terminal profiles
 - Git, Problems, Debug Console, and Output panel colors
 
 The icon themes are:
@@ -46,6 +47,13 @@ VS Code can use one icon theme at a time. This extension defaults to **Pixels to
 The product icon theme is **Pixels to Punk Product Icons**. It changes small VS Code button icons like Search, Source Control, Run, Terminal, Settings, close, refresh, warning, and error icons.
 
 The file icons cover common things like JavaScript, TypeScript, React, HTML, CSS, JSON, Markdown, shell scripts, Git files, Docker files, YAML, Python, Rust, Go, `.env`, `package.json`, `README.md`, license files, config files, and GitHub files.
+
+The macOS Terminal files live in `mac-terminal-themes/`. The `.terminal` profiles make the macOS Terminal app use the same background, text, cursor, selection, font, and ANSI accent colors as the main Cyber Dark and Cyber Light VS Code themes. The matching `.zsh` files turn on colored `ls`, add useful listing aliases, set grep highlights, and add a small cyan/magenta prompt.
+
+The macOS Terminal themes are:
+
+- **Pixels to Punk Cyber Dark**
+- **Pixels to Punk Cyber Light**
 
 ## What This Does
 

@@ -33,6 +33,7 @@ VS Code reads the JSON and SVG files in this repo.
 | `icons/pixels-to-punk-cyber-icon-theme.json` | Maps files to dark icons. |
 | `icons/pixels-to-punk-cyber-light-icon-theme.json` | Maps files to light icons. |
 | `producticons/` | Holds the product icon theme and product icon font. |
+| `mac-terminal-themes/` | Holds importable macOS Terminal profiles plus zsh shell accents for the main Cyber Dark and Cyber Light palettes. |
 | `src/extension.js` | Adds command palette commands, including theme pairs, workspace mood presets, and time-of-day switching. |
 | `scripts/build-theme-variants.js` | Builds theme variants from palettes. |
 | `scripts/build-file-icons.js` | Builds file icons and icon maps. |
